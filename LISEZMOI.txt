@@ -1,0 +1,11 @@
+PALEZZA NETWORK - Site web (base : template Launch, licence MIT)
+
+Ouvrir : double-cliquez sur index.html.
+Mettre en ligne : envoyez tout le dossier a la racine de l'hebergement (Netlify, GitHub Pages, etc.).
+
+A configurer (en bas de index.html) :
+  var CFG={whatsapp:"",email:"contactezowz@gmail.com"}
+  Exemple : whatsapp:"242XXXXXXXXX"  (indicatif sans +, sans espaces)
+
+Pages : index.html (accueil, solutions, realisations, assistance, a propos, contact) et 404.html.
+Aucune connexion ni creation de compte sur le site.
