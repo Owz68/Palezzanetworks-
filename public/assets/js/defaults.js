@@ -1,5 +1,5 @@
 window.PN_DEFAULTS = {
-  whatsapp: "", email: "contactezowz@gmail.com",
+  whatsapp: "", apps: [], email: "contactezowz@gmail.com",
   panels: [
     {eyebrow:"Réseaux informatiques",title:"Des réseaux fiables, du câble au cloud",text:"Étude, installation, optimisation et dépannage de votre réseau, avec une documentation claire remise à la livraison."},
     {eyebrow:"Sites web et logiciels",title:"Votre présence en ligne, sur mesure",text:"Sites professionnels et logiciels de gestion conçus selon vos besoins réels, lisibles sur tous les écrans."},

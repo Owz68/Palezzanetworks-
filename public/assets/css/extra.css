@@ -56,3 +56,43 @@
 @media(min-width:421px) and (max-width:639px){.logo-img{height:1.75rem}}
 
 .board-img{object-fit:cover;border-radius:1.25rem;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+/* ===== Panneaux plein écran, barre de durée masquée ===== */
+.board-bar{display:none!important}.board-ctl{z-index:3}
+html.bfull{overflow-x:clip}
+.board.board-full{width:100vw;max-width:none;margin-left:calc(50% - 50vw);border-radius:0;border:0;box-shadow:none}
+.board.board-full .board-slide{min-height:min(86svh,46rem)}
+.board-slide{position:relative}
+.board-bg{position:absolute;inset:0;z-index:0}.board-bg img{width:100%;height:100%;object-fit:cover;display:block}
+.board-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,40,.8) 0%,rgba(6,16,40,.42) 55%,rgba(6,16,40,.08) 100%),linear-gradient(0deg,rgba(6,16,40,.55),transparent 40%)}
+.board-slide.has-img>*:not(.board-bg){position:relative;z-index:1}
+.board-slide.has-img .board-art{display:none}
+.board-slide.has-img{grid-template-columns:1fr!important;align-content:end}
+.board-slide.has-img>div:not(.board-bg){max-width:40rem}
+@media(min-width:768px){.board.board-full .board-slide{padding-left:max(3.5rem,calc((100vw - 74rem)/2))}}
+/* ===== Logiciels et applications ===== */
+.apps-sec{background:linear-gradient(180deg,#f3f7ff,#fff)}.dark .apps-sec{background:linear-gradient(180deg,rgba(31,107,255,.06),transparent)}
+.apps{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr))}
+.app-card{display:flex;flex-direction:column;gap:.9rem;padding:1.4rem;border-radius:1.25rem;background:#fff;border:1px solid #e4e8f1;text-align:left;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.dark .app-card{background:#0f1624;border-color:rgba(255,255,255,.1)}
+.app-card:hover{transform:translateY(-3px);box-shadow:0 22px 44px -24px rgba(21,85,214,.5)}
+.app-top{display:flex;gap:.9rem;align-items:center}
+.app-ico{width:3.6rem;height:3.6rem;border-radius:1rem;object-fit:cover;flex:none;background:linear-gradient(135deg,#1555d6,#00a3ff);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.4rem}
+.app-n{font-weight:700;font-size:1.05rem;color:#0b1220}.dark .app-n{color:#fff}
+.app-c{font-size:.8rem;color:#64708a}
+.app-s{font-size:.9rem;line-height:1.55;color:#4b5670;flex:1}.dark .app-s{color:#aab4cc}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem}.chip{font-size:.72rem;font-weight:700;padding:.2rem .6rem;border-radius:9999px;background:rgba(31,107,255,.1);color:#1555d6}.dark .chip{color:#93b8ff}
+.app-more{font-size:.85rem;font-weight:700;color:#1555d6}.dark .app-more{color:#93b8ff}
+.am{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:1rem;background:rgba(5,10,24,.65);backdrop-filter:blur(4px)}
+.am-p{position:relative;width:100%;max-width:44rem;max-height:92svh;overflow:auto;border-radius:1.5rem;background:#fff;color:#0b1220;padding:1.6rem}
+.dark .am-p{background:#0f1624;color:#eef2fb}
+.am-x{position:sticky;top:0;float:right;width:2.2rem;height:2.2rem;border-radius:9999px;border:0;background:rgba(100,112,138,.18);color:inherit;font-size:1.3rem;cursor:pointer;z-index:2}
+.am-h{display:flex;gap:1rem;align-items:center}.am-h .app-ico{width:5rem;height:5rem;border-radius:1.3rem}
+.am-h h2{font-size:1.5rem;font-weight:800;line-height:1.2}
+.shots{display:flex;gap:.7rem;overflow-x:auto;scroll-snap-type:x mandatory;margin:1.2rem -.2rem;padding:.2rem;-webkit-overflow-scrolling:touch}
+.shots img{height:20rem;width:auto;max-width:82%;border-radius:1rem;scroll-snap-align:start;flex:none;border:1px solid rgba(100,112,138,.25);background:#e8edf7}
+.am-d{white-space:pre-line;line-height:1.7;font-size:.95rem;color:#4b5670}.dark .am-d{color:#aab4cc}
+.am-r{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;padding:.9rem 0;border-top:1px solid rgba(100,112,138,.2)}
+.am-r b{flex:1 1 7rem}
+.dl,.ins{display:inline-flex;align-items:center;justify-content:center;padding:.55rem 1.1rem;border-radius:9999px;font-size:.88rem;font-weight:700;text-decoration:none}
+.dl{background:linear-gradient(90deg,#1f6bff,#00a3ff);color:#fff}.ins{border:1.5px solid #1f6bff;color:#1555d6}.dark .ins{color:#93b8ff}
