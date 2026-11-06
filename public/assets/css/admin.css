@@ -39,3 +39,12 @@ button{font:inherit;cursor:pointer}svg{width:20px;height:20px;fill:none;stroke:c
 .wn{margin:1rem;padding:1rem;border-radius:12px;background:#fffbeb;color:#78350f}
 @media(max-width:860px){.app{grid-template-columns:1fr}.sb{position:fixed;inset:auto 0 0 0;height:auto;flex-direction:row;justify-content:space-around;padding:.35rem;border:0;border-top:1px solid var(--l);z-index:30}
 .sb img{display:none}.nv{flex-direction:column;gap:.15rem;font-size:.66rem;padding:.4rem .5rem;text-align:center}.tb{padding:.7rem 1rem}#v{padding:1rem 1rem 6rem}#sm{display:none}.vs{display:none}}
+
+/* v3 : vrais boutons, sans halo bleu */
+button,.bt,.bs,.bg,.bd,.nv{-webkit-tap-highlight-color:transparent;touch-action:manipulation;box-shadow:none}
+.bt{background:var(--b);border-color:var(--b)}.bt:hover{background:#1555d6}.bt:active{background:#0b1f4d;transform:scale(.97)}
+.bs:hover{border-color:var(--b)}.bs:active,.bg:active,.nv:active{transform:scale(.97)}
+button:focus,.in:focus{outline:0;box-shadow:none}.in:focus{border-color:var(--b)}
+button:focus-visible,.bt:focus-visible,.bs:focus-visible,.nv:focus-visible{outline:2px solid #0b1f4d;outline-offset:2px}
+@media(prefers-color-scheme:dark){button:focus-visible,.bt:focus-visible,.bs:focus-visible,.nv:focus-visible{outline-color:#fff}}
+.iz img{object-position:center top}

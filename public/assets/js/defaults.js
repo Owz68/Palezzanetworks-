@@ -13,5 +13,20 @@ window.PN_DEFAULTS = {
     {type:"Logiciel",title:"Emplacement réservé",text:"Logiciel de gestion : problème traité, utilisateurs et fonctions clés.",link:""},
     {type:"Application",title:"Emplacement réservé",text:"Application web ou mobile : plateforme et lien de démonstration.",link:""},
     {type:"Réseau",title:"Emplacement réservé",text:"Installation ou optimisation réseau : contexte et résultat obtenu.",link:""}
-  ]
+  ],
+logos: [],
+  sections: {
+    decouverte:{eyebrow:"Découverte",title:"Découvrez ce que le numérique peut faire pour vous",text:"Un premier échange gratuit pour comprendre votre besoin et vous montrer des solutions concrètes.",cta:"Demander une découverte",need:"Rendez-vous",items:[
+      {title:"Échange gratuit",text:"Nous écoutons votre situation et vos contraintes, sans engagement."},
+      {title:"Démonstration",text:"Nous vous montrons des exemples réels de sites, logiciels et applications."},
+      {title:"Pistes claires",text:"Vous repartez avec des recommandations simples et un ordre de priorité."}]},
+    innovation:{eyebrow:"Innovation",title:"Des solutions pensées pour le terrain africain",text:"Nous concevons des outils qui fonctionnent avec une connexion limitée et s’adaptent à vos usages.",cta:"Parler de mon projet",need:"Application",items:[
+      {title:"Applications hors ligne",text:"Des outils qui continuent de fonctionner même quand la connexion est instable."},
+      {title:"Paiement mobile",text:"Intégration des moyens de paiement utilisés au quotidien."},
+      {title:"Automatisation",text:"Moins de tâches répétitives grâce à des outils de gestion sur mesure."}]},
+    formation:{eyebrow:"Formation",title:"Montez en compétence avec Palezza Network",text:"Des formations pratiques pour utiliser le numérique et les réseaux en confiance.",cta:"M’inscrire à une formation",need:"Formation",items:[
+      {title:"Réseaux informatiques",text:"Les bases du câblage, du Wi-Fi et du dépannage réseau."},
+      {title:"Outils numériques",text:"Bureautique, messagerie et organisation numérique au quotidien."},
+      {title:"Création de site web",text:"Comprendre comment un site est conçu, publié et mis à jour."}]}
+  }
 };

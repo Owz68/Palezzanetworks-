@@ -9,3 +9,8 @@ A configurer (en bas de index.html) :
 
 Pages : index.html (accueil, solutions, realisations, assistance, a propos, contact) et 404.html.
 Aucune connexion ni creation de compte sur le site.
+
+--- v3 ---
+Images nettes (recadrées, jamais déformées), vrais boutons sans halo bleu, couleurs par type de projet,
+boutons haut/bas de page, bande « Ils nous font confiance » (logos noir et blanc, gérés depuis l'espace gestionnaire),
+sections Découverte / Innovation / Formation (modifiables depuis l'espace gestionnaire).

@@ -40,16 +40,7 @@ if(ok(p.image)){var w=document.createElement('div');w.className='board-bg';var i
 if(any){bd.classList.add('board-full');document.documentElement.classList.add('bfull')}
 for(var q=sl.length-1;q>=Math.min(v.panels.length,7);q--)sl[q].remove();
 if(window.PN_boardRefresh)window.PN_boardRefresh()}
-var g=document.querySelector('#realisations .grid');
-if(g&&Array.isArray(v.projects)&&v.projects.length){g.textContent='';
-v.projects.forEach(function(p){var art=document.createElement('article');art.className='card overflow-hidden';
-var th=ok(p.image)?document.createElement('img'):document.createElement('div');if(ok(p.image)){th.src=p.image;th.alt=p.title||'';th.loading='lazy';th.className='h-36 w-full object-cover'}else th.className='grid h-36 place-content-center bg-gradient-to-br from-brand-900 to-brand-600 text-sm font-extrabold tracking-widest text-white uppercase';if(!ok(p.image))th.textContent=p.type||'Projet';
-var b=document.createElement('div');b.className='p-5';
-var h=document.createElement('h3');h.className='font-semibold text-zinc-950 dark:text-white';h.textContent=p.title||'';
-var t=document.createElement('p');t.className='mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400';t.textContent=p.text||'';
-b.appendChild(h);b.appendChild(t);
-if(p.link&&/^https?:\/\//i.test(p.link)){var l=document.createElement('a');l.href=p.link;l.target='_blank';l.rel='noopener';l.className='mt-3 inline-block text-sm font-semibold text-brand-600 hover:underline dark:text-brand-300';l.textContent='Voir le projet';b.appendChild(l)}
-art.appendChild(th);art.appendChild(b);g.appendChild(art)})}
+if(window.PN_apply)window.PN_apply(v);
 /* Logiciels et applications */
 var box=document.getElementById('apps'),sec=document.getElementById('logiciels');
 if(box&&sec&&Array.isArray(v.apps)&&v.apps.length){v.apps.forEach(function(a){if(!a||!a.name)return;
