@@ -6,7 +6,8 @@ window.PN_DEFAULTS = {
     {eyebrow:"Applications mobiles et web",title:"Votre idée, en application",text:"Des applications installables et utilisables même avec une connexion limitée, pensées pour le terrain."},
     {eyebrow:"Assistance et maintenance",title:"Un problème ? Un plan d’action clair",text:"Poste lent, panne ou perte de connexion : décrivez la situation, nous diagnostiquons et vous répondons avec les étapes à suivre."},
     {eyebrow:"Maintenance informatique",title:"Vos équipements toujours opérationnels",text:"Entretien préventif, mise à jour et remise en état de vos ordinateurs et équipements, pour limiter les pannes et les arrêts d’activité."},
-    {eyebrow:"Contact",title:"Parlons de votre projet",text:"Décrivez votre besoin par WhatsApp ou par e-mail : nous revenons vers vous avec une proposition claire."}
+    {eyebrow:"Contact",title:"Parlons de votre projet",text:"Décrivez votre besoin par WhatsApp ou par e-mail : nous revenons vers vous avec une proposition claire."},
+    {eyebrow:"Palezza Networks",title:"{{Palezza Networks, connectez votre monde}}",text:"Réseaux, sites web, logiciels et applications : une seule équipe pour rester connecté."}
   ],
   projects: [
     {type:"Site web",title:"Emplacement réservé",text:"Site vitrine ou e-commerce : captures, objectif et lien public.",link:""},

@@ -8,7 +8,7 @@ button,.btn,a.btn{-webkit-tap-highlight-color:transparent;touch-action:manipulat
 .btn:focus{outline:none}
 .btn:focus-visible{outline:2px solid #0b1f4d;outline-offset:2px}
 .dark .btn:focus-visible{outline-color:#fff}
-.btn-primary,.btn-primary:hover{box-shadow:none!important}
+.btn-primary:not(.btn-slide),.btn-primary:not(.btn-slide):hover{box-shadow:none!important}
 .btn-primary{background:#1555d6;border-color:#1555d6;color:#fff}
 .btn-primary:hover{background:#1b3a80;border-color:#1b3a80}
 .btn-primary:active{background:#0b1f4d;border-color:#0b1f4d}
@@ -36,19 +36,6 @@ button,.btn,a.btn{-webkit-tap-highlight-color:transparent;touch-action:manipulat
 .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .media-ph{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:#fff;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;background:linear-gradient(135deg,var(--ac-d,#0b1f4d),var(--ac,#1f6bff))}
 
-/* ---- Projets : couleur par rubrique, accord avec le bleu du logo ---- */
-.project{--ac:#1f6bff;--ac-d:#0b1f4d;--ac-l:#eaf1ff;border-top:4px solid var(--ac)}
-.project[data-type=logiciel]{--ac:#5b4bdb;--ac-d:#2a2275;--ac-l:#efedff}
-.project[data-type=application]{--ac:#0f9d8a;--ac-d:#064e46;--ac-l:#e3f7f3}
-.project[data-type=reseau]{--ac:#e08a00;--ac-d:#7a4a00;--ac-l:#fff3dc}
-.project[data-type=conseil]{--ac:#0a8fc4;--ac-d:#064d6b;--ac-l:#e2f4fb}
-.project[data-type=maintenance]{--ac:#d6457a;--ac-d:#6e1a3a;--ac-l:#fde9f0}
-.pchip{display:inline-block;padding:.2rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--ac-l,#eaf1ff);color:var(--ac-d,#0b1f4d)}
-.dark .pchip{background:color-mix(in srgb,var(--ac) 22%,transparent);color:#fff}
-.project .plink{color:var(--ac-d)}
-.dark .project .plink{color:#fff}
-.project:hover{border-color:var(--ac)}
-
 /* ---- Bande « Ils nous font confiance » ---- */
 .trust{padding:3rem 0;border-block:1px solid #e4e4e7;background:#fff;overflow:hidden}
 .dark .trust{background:#09090b;border-color:rgba(255,255,255,.1)}
@@ -58,9 +45,6 @@ button,.btn,a.btn{-webkit-tap-highlight-color:transparent;touch-action:manipulat
 .trust-track{display:flex;width:max-content;animation:trustmove var(--dur,30s) linear infinite}
 .trust-view:hover .trust-track{animation-play-state:paused}
 .trust-set{display:flex;gap:1rem;padding-right:1rem}
-.trust-item{display:grid;place-items:center;flex:none;width:9.5rem;height:4.5rem;padding:.75rem 1rem;border-radius:1rem;background:#fff;border:1px solid #e4e4e7}
-.trust-item img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:grayscale(1) contrast(1.15);opacity:.85}
-.trust-item.ph{border-style:dashed;color:#8a96ad;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 @keyframes trustmove{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.trust-track{animation:none}.trust-view{overflow-x:auto}}
 
@@ -86,3 +70,113 @@ button,.btn,a.btn{-webkit-tap-highlight-color:transparent;touch-action:manipulat
 
 .app-card:focus,.app-card:focus-visible{outline:none}.app-card:focus-visible{outline:2px solid #0b1f4d;outline-offset:2px}
 .app-card,.dl,.ins,.am-x{-webkit-tap-highlight-color:transparent}
+
+/* ===== v3.1 : bande de logos (taille esthétique, jamais coupés) ===== */
+.trust-view{padding-block:.25rem}
+.trust-track{align-items:center}
+.trust-item{display:flex;align-items:center;justify-content:center;flex:none;width:8.25rem;height:4rem;padding:.5rem .9rem;overflow:hidden;box-sizing:border-box;border-radius:.9rem}
+.trust-item img{display:block;width:auto;height:auto;max-width:6.4rem;max-height:2.5rem;object-fit:contain}
+@media(min-width:768px){.trust-item{width:9.5rem;height:4.5rem}.trust-item img{max-width:7.4rem;max-height:2.9rem}}
+
+/* ===== Bouton « texte qui glisse » (Uiverse / Rauliqbal), adapté au bleu de la marque ===== */
+.btn.btn-slide{position:relative;border:1px solid #64748b;border-radius:.85rem;background:linear-gradient(180deg,#5b86ff,#3a56e0);color:#fff;font-weight:600;cursor:pointer;box-shadow:none;transition:box-shadow .35s,transform .1s}
+.btn.btn-slide:hover{background:linear-gradient(180deg,#5b86ff,#3a56e0);box-shadow:0 8px 26px -8px rgba(79,110,255,.6)}
+.btn.btn-slide:active{box-shadow:none;transform:scale(.97)}
+.btn.btn-slide:focus{outline:none}.btn.btn-slide:focus-visible{outline:2px solid #0b1f4d;outline-offset:2px}
+.dark .btn.btn-slide:focus-visible{outline-color:#fff}
+.btn-slide .bs-in{position:relative;overflow:hidden;height:1.5rem;line-height:1.5rem}
+.btn-slide .bs-in span{display:block;white-space:nowrap;transition:transform 1.125s cubic-bezier(.19,1,.22,1)}
+.btn-slide .bs-in span+span{position:absolute;left:0;right:0;top:0;transform:translateY(1.75rem)}
+.btn-slide:hover .bs-in span:first-child,.btn-slide:focus-visible .bs-in span:first-child{transform:translateY(-1.75rem)}
+.btn-slide:hover .bs-in span+span,.btn-slide:focus-visible .bs-in span+span{transform:none}
+@media(hover:none){.btn-slide .bs-in span+span{display:none}.btn-slide:hover .bs-in span:first-child{transform:none}}
+
+/* ===== Bouton Télécharger (Uiverse / satyamchaudharydev) ===== */
+.dlbtn{--w:9.5rem;--h:2.6rem;--tw:11rem;--th:2.2rem;--gap:1rem;position:relative;display:inline-block;width:var(--w);height:var(--h);border-radius:.6rem;background:#1163ff;color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;text-align:center;transition:background .3s;-webkit-tap-highlight-color:transparent;box-shadow:none}
+.dlbtn .t,.dlbtn .i{position:absolute;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff;transition:top .5s}
+.dlbtn .t{top:0}.dlbtn .i{top:100%}.dlbtn .i svg{width:1.5rem;height:1.5rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dlbtn::before{position:absolute;content:attr(data-tooltip);width:var(--tw);height:var(--th);line-height:var(--th);background:#fff;color:#111;font-size:.8rem;font-weight:600;border-radius:.3rem;bottom:calc(var(--h) + var(--gap) + .6rem);left:calc(50% - var(--tw)/2);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.dlbtn::after{position:absolute;content:"";width:0;height:0;border:.6rem solid transparent;border-top-color:#fff;left:calc(50% - .6rem);bottom:calc(100% + var(--gap) - .6rem)}
+.dlbtn::before,.dlbtn::after{opacity:0;visibility:hidden;transition:all .5s;pointer-events:none}
+.dlbtn:hover,.dlbtn:focus-visible{background:#6c18ff;outline:none}
+.dlbtn:hover .t,.dlbtn:focus-visible .t{top:-100%}.dlbtn:hover .i,.dlbtn:focus-visible .i{top:0}
+.dlbtn:hover::before,.dlbtn:hover::after,.dlbtn:focus-visible::before,.dlbtn:focus-visible::after{opacity:1;visibility:visible}
+.dlbtn:hover::after,.dlbtn:focus-visible::after{bottom:calc(var(--h) + var(--gap) - 1.2rem)}
+.dlbtn:hover::before,.dlbtn:focus-visible::before{bottom:calc(var(--h) + var(--gap))}
+.dlbtn:active{transform:scale(.97)}
+.am-r{padding-top:1.2rem}
+.ins.btn-slide{padding:.55rem 1.2rem;border-radius:.6rem}
+
+/* ===== Cartes réalisations / logiciels (Uiverse / adamgiebl, imtausef, Smit-Prajapati) ===== */
+.ucard{--bg:#1b233d;--c1:#049fbb;--c2:#50f6ff;position:relative;display:flex;flex-direction:column;border-radius:20px;background:var(--bg);padding:5px;overflow:hidden;color:#fff;text-align:left;box-shadow:rgba(100,100,111,.2) 0 7px 20px 0;transition:transform .5s cubic-bezier(.175,.885,.32,1.275)}
+.ucard:hover{transform:scale(1.04)}
+.ucard[data-type=application]{--bg:#141414;--c1:#8ed500;--c2:#8ed500}
+.ucard[data-type=logiciel]{--bg:#1d1b3d;--c1:#5b4bdb;--c2:#a99cff}
+.ucard[data-type=reseau]{--bg:#2a2012;--c1:#e08a00;--c2:#ffd166}
+.ucard[data-type=conseil]{--bg:#14263a;--c1:#0a8fc4;--c2:#7dd3fc}
+.ucard[data-type=maintenance]{--bg:#2b1420;--c1:#d6457a;--c2:#ff9ec0}
+.ucard .ts{position:relative;display:flex;flex-direction:column;height:11rem;border-radius:15px;background:linear-gradient(45deg,var(--c1) 0%,var(--c2) 100%)}
+.ucard .ts-img{position:absolute;inset:0;border-radius:15px;overflow:hidden;z-index:0;display:grid;place-items:center}
+.ucard .ts-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.ucard .ts-ph{font-size:3.2rem;font-weight:800;color:rgba(255,255,255,.92);text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.ucard[data-type=application] .ts-ph{color:#141414}
+.ucard .nt{position:relative;z-index:2;height:30px;width:130px;background:var(--bg);border-bottom-right-radius:10px;transform:skew(-40deg);box-shadow:-10px -10px 0 0 var(--bg)}
+.ucard .nt::before{content:"";position:absolute;width:15px;height:15px;top:0;right:-15px;background:rgba(255,255,255,0);border-top-left-radius:10px;box-shadow:-5px -5px 0 2px var(--bg)}
+.ucard .ts::before{content:"";position:absolute;z-index:2;top:30px;left:0;width:15px;height:15px;background:rgba(255,255,255,0);border-top-left-radius:15px;box-shadow:-5px -5px 0 2px var(--bg)}
+.ucard .icons{position:absolute;z-index:3;top:0;left:0;width:100%;height:30px;display:flex;justify-content:space-between;align-items:center}
+.ucard .tag{max-width:120px;padding:0 0 0 15px;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff}
+.ucard .ext{display:grid;place-items:center;width:1.9rem;height:1.9rem;margin:.55rem .55rem 0 0;border-radius:9999px;background:var(--bg);color:#fff;transition:background .2s,color .2s}
+.ucard .ext:hover{background:#fff;color:var(--bg)}.ucard .ext svg{width:1rem;height:1rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ucard .bs2{display:flex;flex:1;flex-direction:column;margin-top:15px;padding:10px 8px 14px}
+.ucard .ttl{display:block;font-size:1rem;font-weight:800;color:#fff;text-align:center;letter-spacing:.06em}
+.ucard .txt{margin-top:.6rem;font-size:.84rem;line-height:1.55;color:rgba(190,225,243,.82);text-align:center;flex:1}
+.ucard .row{display:flex;justify-content:space-between;margin-top:1rem}
+.ucard .item{flex:1 1 30%;padding:5px;text-align:center;color:rgba(190,225,243,.8)}
+.ucard .item+.item{border-left:1px solid rgba(255,255,255,.13)}
+.ucard .big{display:block;font-size:.8rem;font-weight:700;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ucard .reg{font-size:.62rem}
+.ucard .go{margin-top:1rem;align-self:center;font-size:.85rem}
+@media(prefers-reduced-motion:reduce){.ucard,.ucard:hover{transform:none;transition:none}}
+
+/* ===== Écrans qui défilent (Uiverse / Nawsome) : vos captures dans les cadres animés ===== */
+.stage{--k:1.5;position:relative;height:calc(var(--k)*135px);margin:1.2rem 0 .4rem;overflow:hidden;border-radius:1rem;background:radial-gradient(circle at 50% 40%,#16314a,#0a1422)}
+.stage i{position:absolute;top:50%;left:50%;display:block;overflow:hidden;z-index:10;border-radius:5px;background:#1e3f57;width:calc(var(--k)*160px);height:calc(var(--k)*100px);margin:calc(var(--k)*-50px) 0 0 calc(var(--k)*-80px);animation:dot1_ 3s cubic-bezier(.55,.3,.24,.99) infinite}
+.stage i:nth-child(2){z-index:11;border-radius:3px;background:#3c517d;width:calc(var(--k)*150px);height:calc(var(--k)*90px);margin:calc(var(--k)*-45px) 0 0 calc(var(--k)*-75px);animation-name:dot2_}
+.stage i:nth-child(3){z-index:12;border-radius:0 0 5px 5px;background:#6bb2cd;width:calc(var(--k)*40px);height:calc(var(--k)*20px);margin:calc(var(--k)*50px) 0 0 calc(var(--k)*-20px);animation-name:dot3_}
+.stage i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+@keyframes dot1_{3%,97%{width:calc(var(--k)*160px);height:calc(var(--k)*100px);margin-top:calc(var(--k)*-50px);margin-left:calc(var(--k)*-80px)}30%,36%{width:calc(var(--k)*80px);height:calc(var(--k)*120px);margin-top:calc(var(--k)*-60px);margin-left:calc(var(--k)*-40px)}63%,69%{width:calc(var(--k)*40px);height:calc(var(--k)*80px);margin-top:calc(var(--k)*-40px);margin-left:calc(var(--k)*-20px)}}
+@keyframes dot2_{3%,97%{width:calc(var(--k)*150px);height:calc(var(--k)*90px);margin-left:calc(var(--k)*-75px);margin-top:calc(var(--k)*-45px)}30%,36%{width:calc(var(--k)*70px);height:calc(var(--k)*96px);margin-left:calc(var(--k)*-35px);margin-top:calc(var(--k)*-48px)}63%,69%{width:calc(var(--k)*32px);height:calc(var(--k)*60px);margin-left:calc(var(--k)*-16px);margin-top:calc(var(--k)*-30px)}}
+@keyframes dot3_{3%,97%{width:calc(var(--k)*40px);height:calc(var(--k)*20px);margin-left:calc(var(--k)*-20px);margin-top:calc(var(--k)*50px)}30%,36%{width:calc(var(--k)*8px);height:calc(var(--k)*8px);margin-left:calc(var(--k)*-5px);margin-top:calc(var(--k)*49px);border-radius:8px}63%,69%{width:calc(var(--k)*16px);height:calc(var(--k)*4px);margin-left:calc(var(--k)*-8px);margin-top:calc(var(--k)*-37px);border-radius:10px}}
+@media(min-width:640px){.stage{--k:1.8}}
+@media(prefers-reduced-motion:reduce){.stage i{animation:none}}
+.sdots{display:flex;justify-content:center;gap:.4rem;margin:.2rem 0 1rem}
+.sdots button{width:.55rem;height:.55rem;padding:0;border:0;border-radius:9999px;background:rgba(100,112,138,.4);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.sdots button.on{background:#1f6bff;width:1.3rem}
+
+/* ===== Effet de texte tracé (Uiverse / SelfMadeSystem) : {{mots}} dans n'importe quel texte ===== */
+.fxw{display:inline-block;line-height:0;white-space:nowrap}
+.fxw svg{display:block;overflow:visible}
+.fxw.ok .fxt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.fxw text{fill:currentColor;fill-opacity:0;stroke:currentColor;stroke-width:1.1;stroke-linejoin:round;stroke-linecap:butt;stroke-dasharray:0 1600;animation:fxdraw 5s ease-in-out infinite}
+@keyframes fxdraw{0%{stroke-dasharray:0 1600;stroke-dashoffset:0;fill-opacity:0;stroke-opacity:1}45%{stroke-dasharray:1600 0;fill-opacity:0;stroke-opacity:1}62%{stroke-dasharray:1600 0;fill-opacity:1;stroke-opacity:1}90%{stroke-dasharray:1600 0;fill-opacity:1;stroke-opacity:1}100%{stroke-dasharray:1600 0;fill-opacity:0;stroke-opacity:.2}}
+@media(prefers-reduced-motion:reduce){.fxw text{animation:none;stroke-dasharray:none;fill-opacity:1;stroke-opacity:0}}
+
+/* ===== v3.2 : socle de la bande de logos, loader d'image, captures ===== */
+.trust-item{background:#fff;border:1px solid #e4e4e7;transition:border-color .2s}
+a.trust-item:hover{border-color:#1555d6}
+.trust-item img{filter:grayscale(1) contrast(1.1);opacity:.92}
+.trust-item.ph{border-style:dashed;color:#8a96ad;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.pn-ld{position:absolute;inset:0;z-index:3;pointer-events:none;transform:scale(.62)}
+.pn-ld i{position:absolute;top:50%;left:50%;z-index:10;width:160px;height:100px;margin-left:-80px;margin-top:-50px;border-radius:5px;background:#1e3f57;animation:ld1 3s cubic-bezier(.55,.3,.24,.99) infinite}
+.pn-ld i:nth-child(2){z-index:11;width:150px;height:90px;margin-top:-45px;margin-left:-75px;border-radius:3px;background:#3c517d;animation-name:ld2}
+.pn-ld i:nth-child(3){z-index:12;width:40px;height:20px;margin-top:50px;margin-left:-20px;border-radius:0 0 5px 5px;background:#6bb2cd;animation-name:ld3}
+@keyframes ld1{3%,97%{width:160px;height:100px;margin-top:-50px;margin-left:-80px}30%,36%{width:80px;height:120px;margin-top:-60px;margin-left:-40px}63%,69%{width:40px;height:80px;margin-top:-40px;margin-left:-20px}}
+@keyframes ld2{3%,97%{height:90px;width:150px;margin-left:-75px;margin-top:-45px}30%,36%{width:70px;height:96px;margin-left:-35px;margin-top:-48px}63%,69%{width:32px;height:60px;margin-left:-16px;margin-top:-30px}}
+@keyframes ld3{3%,97%{height:20px;width:40px;margin-left:-20px;margin-top:50px}30%,36%{width:8px;height:8px;margin-left:-5px;margin-top:49px;border-radius:8px}63%,69%{width:16px;height:4px;margin-left:-8px;margin-top:-37px;border-radius:10px}}
+.pn-wait{opacity:0}.is-in{opacity:1;transition:opacity .5s ease}
+.board-bg{background:#0a152a}.board-bg .pn-ld{transform:scale(.8)}
+.ucard .ts-img{background:inherit}
+.shots .shot{position:relative;flex:none;height:20rem;min-width:11.5rem;scroll-snap-align:start;border-radius:1rem;background:#e8edf7;overflow:hidden}
+.shots .shot.ok{min-width:0}
+.shots .shot img{display:block;height:100%;width:auto;max-width:min(82vw,40rem);border:0;border-radius:0;background:none}
+@media(prefers-reduced-motion:reduce){.pn-ld i{animation:none}}

@@ -10,7 +10,7 @@ if(!C.url||!C.key||!window.supabase){show('#setup');return}
 sb=window.supabase.createClient(C.url,C.key);
 $('#nav').insertAdjacentHTML('beforeend',Object.keys(TT).map(function(k){return '<button class="nv" data-t="'+k+'"><svg viewBox="0 0 24 24"><path d="'+IC[k]+'"/></svg>'+({home:'Accueil',panels:'Panneaux',apps:'Logiciels',works:'Projets',logos:'Logos',sections:'Sections',contact:'Contact'})[k]+'</button>'}).join(''));
 /* ---- données ---- */
-function norm(){S.panels=S.panels||[];if(!S.panels.length)S.panels.push({eyebrow:'',title:'',text:'',image:''});S.panels=S.panels.slice(0,7);S.apps=S.apps||[];S.projects=S.projects||[];S.logos=S.logos||[];var ds=D.sections,vs=S.sections||{};S.sections={};Object.keys(ds).forEach(function(k){S.sections[k]=Object.assign(JSON.parse(JSON.stringify(ds[k])),vs[k]||{});S.sections[k].items=S.sections[k].items||[]})}
+function norm(){S.panels=S.panels||[];if(!S.panels.length)S.panels.push({eyebrow:'',title:'',text:'',image:''});S.panels=S.panels.slice(0,9);S.apps=S.apps||[];S.projects=S.projects||[];S.logos=S.logos||[];var ds=D.sections,vs=S.sections||{};S.sections={};Object.keys(ds).forEach(function(k){S.sections[k]=Object.assign(JSON.parse(JSON.stringify(ds[k])),vs[k]||{});S.sections[k].items=S.sections[k].items||[]})}
 function ap(a){a.pl=a.pl||{};OS.forEach(function(o){a.pl[o[0]]=a.pl[o[0]]||{on:false,download:'',install:''}});a.shots=a.shots||[];return a}
 function setp(path,val){var a=path.split('.'),o=S;for(var i=0;i<a.length-1;i++)o=o[a[i]];o[a[a.length-1]]=val}
 /* ---- images : réduites avant envoi (connexion limitée) ---- */
@@ -28,7 +28,7 @@ var V={
 home:function(){var n=S.panels.filter(function(p){return p.image}).length;
 return '<div class="g4">'+stat(n+'/'+S.panels.length,'Panneaux avec image')+stat(S.apps.length,'Logiciels et applications')+stat(S.projects.length,'Réalisations')+stat(S.whatsapp?'Oui':'Non','WhatsApp configuré')+'</div>'+
 '<div class="cd"><h2>Que souhaitez-vous faire ?</h2><p class="sub">Les modifications apparaissent sur le site dès que vous cliquez sur Enregistrer.</p><div class="rw"><button class="bs" data-go="panels">Modifier les panneaux</button><button class="bs" data-go="apps">Gérer les logiciels</button><button class="bs" data-go="works">Ajouter une réalisation</button><button class="bs" data-go="contact">Changer le contact</button></div></div>'},
-panels:function(){return '<div class="rw sp" style="margin-bottom:1rem"><p class="sub">'+S.panels.length+'/7 panneaux. L’image occupe tout le panneau ; le texte s’affiche par-dessus. Format conseillé : paysage.</p>'+(S.panels.length<7?'<button class="bt" data-ap>+ Ajouter un panneau</button>':'')+'</div><div class="g2">'+S.panels.map(function(p,i){
+panels:function(){return '<div class="rw sp" style="margin-bottom:1rem"><p class="sub">'+S.panels.length+'/9 panneaux. L’image occupe tout le panneau ; le texte s’affiche par-dessus. Format conseillé : paysage. Astuce : entourez des mots avec {{ }} pour l’effet de tracé animé (ex. {{connectez votre monde}}) ; cela marche aussi dans les titres et textes des sections et des projets.</p>'+(S.panels.length<9?'<button class="bt" data-ap>+ Ajouter un panneau</button>':'')+'</div><div class="g2">'+S.panels.map(function(p,i){
 return '<div class="cd"><div class="rw sp"><h2>Panneau '+(i+1)+'</h2><div class="rw"><span class="chip">'+(p.image?'Image':'Sans image')+'</span>'+(S.panels.length>1?'<button class="bd" data-dpn="'+i+'">Supprimer</button>':'')+'</div></div><div class="iz" data-pk="'+i+'">'+(p.image?'<img src="'+esc(p.image)+'" alt="">':'<span>+ Ajouter une image</span>')+'<div class="ov"><b data-ov="'+i+'">'+esc(p.title||'Titre du panneau')+'</b></div></div>'+
 (p.image?'<div class="rw"><button class="bs" data-pk="'+i+'">Changer l’image</button><button class="bd" data-rp="'+i+'">Retirer</button></div>':'')+
 F('panels.'+i+'.eyebrow','Rubrique',p.eyebrow)+F('panels.'+i+'.title','Titre',p.title)+F('panels.'+i+'.text','Texte',p.text,'ta')+'</div>'}).join('')+'</div>'},
@@ -71,7 +71,7 @@ else if(d.ns!==undefined){var it=S.sections[d.ns].items;if(it.length<6){it.push(
 else if(d.ds!==undefined){var q=d.ds.split('.');S.sections[q[0]].items.splice(+q[1],1);dirty=true;render()}
 else if(d.pj!==undefined){var j=+d.pj;pick({max:1200,done:function(u){S.projects[j].image=u[0]}})}
 else if(d.rj!==undefined){S.projects[+d.rj].image='';dirty=true;render()}
-else if('ap' in d){if(S.panels.length>=7)return;S.panels.push({eyebrow:'',title:'',text:'',image:''});dirty=true;render()}
+else if('ap' in d){if(S.panels.length>=9)return;S.panels.push({eyebrow:'',title:'',text:'',image:''});dirty=true;render()}
 else if(d.dpn!==undefined){if(S.panels.length>1&&confirm('Supprimer ce panneau ?')){S.panels.splice(+d.dpn,1);dirty=true;render()}}
 else if('np' in d){if(S.projects.length>=8)return;S.projects.push({type:'Site web',title:'',text:'',link:'',image:''});dirty=true;render()}
 else if(d.dp!==undefined){S.projects.splice(+d.dp,1);dirty=true;render()}};
