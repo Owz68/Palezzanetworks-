@@ -10,7 +10,7 @@ window.PN_DEFAULTS = {
     {eyebrow:"Palezza Networks",title:"{{Palezza Networks, connectez votre monde}}",text:"Réseaux, sites web, logiciels et applications : une seule équipe pour rester connecté."}
   ],
   projects: [
-    {type:"Site web",title:"Emplacement réservé",text:"Site vitrine ou e-commerce : captures, objectif et lien public.",link:""},
+    {type:"Site web",title:"Emplacement réservé",text:"Site vitrine ou e-commerce : captures, objectif et lien public.",link:"",dl:"",board:false},
     {type:"Logiciel",title:"Emplacement réservé",text:"Logiciel de gestion : problème traité, utilisateurs et fonctions clés.",link:""},
     {type:"Application",title:"Emplacement réservé",text:"Application web ou mobile : plateforme et lien de démonstration.",link:""},
     {type:"Réseau",title:"Emplacement réservé",text:"Installation ou optimisation réseau : contexte et résultat obtenu.",link:""}

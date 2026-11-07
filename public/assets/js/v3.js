@@ -67,13 +67,42 @@ window.PN_card=function(o){
  if(o.text){var p=el('p','txt');text(p,o.text);b.appendChild(p)}
  var row=el('div','row');(o.stats||[]).forEach(function(s){var it=el('div','item');it.appendChild(el('span','big',s[0]));it.appendChild(el('span','reg',s[1]));row.appendChild(it)});b.appendChild(row);
  if(o.cta){var g=el(web(o.href)?'a':'span','go btn btn-primary');if(web(o.href)){g.href=o.href;g.target='_blank';g.rel='noopener'}window.PN_slide(g,o.cta);b.appendChild(g)}
+ if(web(o.dl)){var d=window.PN_dl(o.dl,'Télécharger','Télécharger '+(o.title||''));d.classList.add('card-dl');b.appendChild(d)}
  a.appendChild(ts);a.appendChild(b);return a};
 
+var CATS=['Site web','Application','Réseau','Logiciel'];
+function carousel(items){
+ var w=el('div','cr'),tr=el('div','cr-track'),nav=el('div','cr-nav'),dots=el('div','cr-dots'),n=items.length,idx=0,tm,hov=false;
+ items.forEach(function(c){var s=el('div','cr-slide');s.appendChild(c);tr.appendChild(s)});
+ function go(k,smooth){idx=(k+n)%n;tr.scrollTo({left:tr.children[idx].offsetLeft-tr.offsetLeft,behavior:smooth===false||RM?'auto':'smooth'});mark()}
+ function mark(){[].forEach.call(dots.children,function(d,i){d.classList.toggle('on',i===idx)});cnt.textContent=(idx+1)+' / '+n}
+ var cnt=el('span','cr-cnt');
+ function arrow(dir,t){var b=el('button','cr-btn');b.type='button';b.setAttribute('aria-label',t);b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+(dir<0?'m15 5-7 7 7 7':'m9 5 7 7-7 7')+'"/></svg>';b.onclick=function(){go(idx+dir)};return b}
+ for(var i=0;i<n;i++)(function(i){var d=el('button');d.type='button';d.setAttribute('aria-label','Projet '+(i+1));d.onclick=function(){go(i)};dots.appendChild(d)})(i);
+ w.appendChild(tr);
+ if(n>1){nav.appendChild(arrow(-1,'Précédent'));nav.appendChild(cnt);nav.appendChild(dots);nav.appendChild(arrow(1,'Suivant'));w.appendChild(nav);
+  var sc;tr.addEventListener('scroll',function(){clearTimeout(sc);sc=setTimeout(function(){var k=Math.round(tr.scrollLeft/tr.clientWidth);if(k!==idx&&k>=0&&k<n){idx=k;mark()}},80)},{passive:true});
+  function loop(){clearTimeout(tm);if(RM)return;tm=setTimeout(function(){if(!hov&&document.visibilityState==='visible')go(idx+1);loop()},6000)}
+  w.addEventListener('pointerenter',function(){hov=true});w.addEventListener('pointerleave',function(){hov=false});w.addEventListener('touchstart',function(){hov=true},{passive:true});w.addEventListener('touchend',function(){setTimeout(function(){hov=false},4000)},{passive:true});
+  mark();loop()}
+ return w}
 function projects(list){
  var g=document.querySelector('#realisations .grid');if(!g||!Array.isArray(list)||!list.length)return;g.textContent='';
- list.forEach(function(p){var l=web(p.link);
-  g.appendChild(window.PN_card({type:p.type||'Site web',label:p.type||'Projet',title:p.title,text:p.text,image:p.image,href:l?p.link:'',
-   stats:[[l?'En ligne':'Sur demande','Accès'],[p.type||'Projet','Catégorie'],['Palezza','Réalisé par']],cta:l?'Voir le projet':''}))})}
+ var by={};list.forEach(function(p){var t=p.type||'Site web';(by[t]=by[t]||[]).push(p)});
+ var order=CATS.filter(function(c){return by[c]}).concat(Object.keys(by).filter(function(c){return CATS.indexOf(c)<0}));
+ order.forEach(function(t){var col=el('div','cat-col'),cs=by[t].map(function(p){var l=web(p.link),dl=web(p.dl),site=slug(t)==='site-web';
+   return window.PN_card({type:t,label:t,title:p.title,text:p.text,image:p.image,href:l?p.link:'',dl:dl?p.dl:'',
+    stats:[[l||dl?'En ligne':'Sur demande','Accès'],[t,'Catégorie'],['Palezza','Réalisé par']],cta:l?(site?'Visiter':'Voir'):''})});
+  col.appendChild(carousel(cs));g.appendChild(col)})}
+
+/* ---------- Panneau d'affichage : tout ce qui est activé côté gestionnaire ---------- */
+window.PN_broadcast=function(v){var o=[],S=v||{};
+ (S.projects||[]).forEach(function(p){if(p&&p.board&&p.title)o.push({eyebrow:p.type||'Projet',title:p.title,text:p.text,image:p.image})});
+ (S.apps||[]).forEach(function(a){if(a&&a.board&&a.name)o.push({eyebrow:a.cat||'Application',title:a.name,text:a.short||a.desc,image:(a.shots||[])[0]})});
+ var sc=S.sections||{};Object.keys(sc).forEach(function(k){var d=sc[k];if(!d)return;
+  if(d.board&&d.title)o.push({eyebrow:d.eyebrow,title:d.title,text:d.text});
+  (d.tabs||[]).forEach(function(t){if(t&&t.board&&(t.title||t.name))o.push({eyebrow:(d.eyebrow||'')+(t.name?' · '+t.name:''),title:t.title||t.name,text:t.text})})});
+ return o};
 
 /* ---------- Bande « Ils nous font confiance » ---------- */
 function logos(list){
@@ -97,8 +126,13 @@ function sections(S){
   var e1=el('p','eyebrow-s');text(e1,d.eyebrow||'');h.appendChild(e1);
   var h2=el('h2','mt-3 text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl dark:text-white');text(h2,d.title||'');h.appendChild(h2);
   var p=el('p','mt-4 text-lg leading-8 text-zinc-600 dark:text-zinc-400');text(p,d.text||'');h.appendChild(p);w.appendChild(h);
-  var g=el('div','sec-grid');(d.items||[]).forEach(function(it,i){var c=el('article','sec-card');
-   c.appendChild(el('div','sec-num',String(i+1)));var t=el('h3');text(t,it.title||'');c.appendChild(t);var q=el('p');text(q,it.text||'');c.appendChild(q);g.appendChild(c)});w.appendChild(g);
+  var tabs=[{name:d.tabname||'Présentation',items:d.items||[]}].concat((d.tabs||[]).filter(function(t){return t&&(t.name||t.title||(t.items||[]).length)}));
+  var bar=el('div','sec-tabs'),pane=el('div','sec-pane');
+  function fill(t){pane.textContent='';if(t.title||t.text){var hd=el('div','sec-th');if(t.title){var h3=el('h3');text(h3,t.title);hd.appendChild(h3)}if(t.text){var tp=el('p');text(tp,t.text);hd.appendChild(tp)}pane.appendChild(hd)}
+   var g=el('div','sec-grid');(t.items||[]).forEach(function(it,i){var c=el('article','sec-card');
+    c.appendChild(el('div','sec-num',String(i+1)));var t3=el('h3');text(t3,it.title||'');c.appendChild(t3);var q=el('p');text(q,it.text||'');c.appendChild(q);g.appendChild(c)});pane.appendChild(g)}
+  if(tabs.length>1){tabs.forEach(function(t,i){var b=el('button',i?'':'on',t.name||('Onglet '+i));b.type='button';b.onclick=function(){[].forEach.call(bar.children,function(x){x.classList.remove('on')});b.classList.add('on');fill(t)};bar.appendChild(b)});w.appendChild(bar)}
+  fill(tabs[0]);w.appendChild(pane);
   if(d.cta){var a=el('a','btn btn-primary sec-cta');a.href='#contact';a.dataset.need=d.need||'Devis';window.PN_slide(a,d.cta);w.appendChild(a)}
   s.appendChild(w)})}
 

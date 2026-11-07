@@ -32,13 +32,13 @@ fetch(C.url.replace(/\/$/,'')+'/rest/v1/site_settings?key=eq.site&select=value',
 var v=rows&&rows[0]&&rows[0].value;if(!v)return;
 if(typeof CFG!=='undefined'){if(typeof v.whatsapp==='string')CFG.whatsapp=v.whatsapp.replace(/\D/g,'');if(v.email)CFG.email=String(v.email);
 var fm=document.getElementById('fmail');if(fm){fm.textContent='';if(CFG.email){var a=document.createElement('a');a.href='mailto:'+CFG.email;a.textContent=CFG.email;fm.appendChild(a)}}}
-var bd=document.querySelector('.board'),ok=function(u){return typeof u==='string'&&/^https:\/\//i.test(u)};
-if(bd&&Array.isArray(v.panels)&&v.panels.length){var any=false,sl=[].slice.call(bd.querySelectorAll('.board-slide')),tpl=sl[0].cloneNode(true),ctl=bd.querySelector('.board-ctl');
-v.panels.slice(0,9).forEach(function(p,i){var s=sl[i];if(!s){s=tpl.cloneNode(true);s.classList.remove('on');bd.insertBefore(s,ctl);sl.push(s)}if(!p)return;
+var pans=(Array.isArray(v.panels)?v.panels:[]).concat(window.PN_broadcast?PN_broadcast(v):[]);var bd=document.querySelector('.board'),ok=function(u){return typeof u==='string'&&/^https:\/\//i.test(u)};
+if(bd&&pans.length){var any=false,sl=[].slice.call(bd.querySelectorAll('.board-slide')),tpl=sl[0].cloneNode(true),ctl=bd.querySelector('.board-ctl');
+pans.slice(0,30).forEach(function(p,i){var s=sl[i];if(!s){s=tpl.cloneNode(true);s.classList.remove('on');bd.insertBefore(s,ctl);sl.push(s)}if(!p)return;
 [['.board-eyebrow','eyebrow'],['.board-title','title'],['.board-text','text']].forEach(function(m){var el=s.querySelector(m[0]);if(el&&p[m[1]]){if(window.PN_text)PN_text(el,p[m[1]]);else el.textContent=String(p[m[1]]).replace(/\{\{|\}\}/g,'')}});
 if(ok(p.image)){var w=document.createElement('div');w.className='board-bg';var im=new Image();im.src=p.image;im.alt='';if(i)im.loading='lazy';w.appendChild(im);s.insertBefore(w,s.firstChild);s.classList.add('has-img');any=true}});
 if(any){bd.classList.add('board-full');document.documentElement.classList.add('bfull')}
-for(var q=sl.length-1;q>=Math.min(v.panels.length,9);q--)sl[q].remove();
+for(var q=sl.length-1;q>=Math.min(pans.length,30);q--)sl[q].remove();
 if(window.PN_boardRefresh)window.PN_boardRefresh()}
 if(window.PN_apply)window.PN_apply(v);
 /* Logiciels et applications */

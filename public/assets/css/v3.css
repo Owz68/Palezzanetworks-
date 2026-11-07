@@ -180,3 +180,26 @@ a.trust-item:hover{border-color:#1555d6}
 .shots .shot.ok{min-width:0}
 .shots .shot img{display:block;height:100%;width:auto;max-width:min(82vw,40rem);border:0;border-radius:0;background:none}
 @media(prefers-reduced-motion:reduce){.pn-ld i{animation:none}}
+
+/* ---------- v4 : carrousel par catégorie (Nos projets) ---------- */
+.cat-col{min-width:0}
+.cr{position:relative}
+.cr-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:.5rem 0 1rem}
+.cr-track::-webkit-scrollbar{display:none}
+.cr-slide{flex:0 0 100%;scroll-snap-align:start;padding:0 .25rem;min-width:0}
+.cr-slide .ucard:hover{transform:none}
+.cr-nav{display:flex;align-items:center;justify-content:center;gap:.7rem}
+.cr-btn{width:2.2rem;height:2.2rem;border-radius:50%;border:1px solid rgba(120,130,160,.35);background:transparent;color:inherit;display:grid;place-items:center;padding:0;box-shadow:none;transition:background .2s,color .2s}
+.cr-btn:hover{background:#1163ff;color:#fff;border-color:#1163ff}
+.cr-btn svg{width:1.1rem;height:1.1rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cr-cnt{font-size:.78rem;font-weight:700;opacity:.65;min-width:2.8rem;text-align:center}
+.cr-dots{display:none}
+@media(min-width:640px){.cr-dots{display:flex;gap:.35rem}.cr-dots button{width:.45rem;height:.45rem;border-radius:99px;border:0;padding:0;background:rgba(120,130,160,.4);transition:width .25s,background .25s}.cr-dots button.on{width:1.3rem;background:#1163ff}.cr-cnt{display:none}}
+.card-dl{margin-top:.9rem}
+/* onglets des sections */
+.sec-tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:2rem}
+.sec-tabs button{padding:.5rem 1.1rem;border-radius:99px;border:1px solid rgba(120,130,160,.35);background:transparent;color:inherit;font-weight:650;font-size:.88rem;box-shadow:none;transition:background .2s,color .2s,border-color .2s}
+.sec-tabs button:hover{border-color:#1163ff}
+.sec-tabs button.on{background:#1163ff;border-color:#1163ff;color:#fff}
+.sec-th{margin-top:2rem;max-width:42rem}.sec-th h3{font-size:1.35rem;font-weight:700}.sec-th p{margin-top:.5rem;opacity:.75}
+.sec-pane .sec-grid{margin-top:1.5rem}
