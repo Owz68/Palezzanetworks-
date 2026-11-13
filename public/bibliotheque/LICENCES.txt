@@ -5,3 +5,7 @@ Polices : chaque fiche indique sa licence (SIL Open Font License 1.1, Apache 2.0
 Icônes (icones.json) : Lucide, licence ISC. Copyright (c) pour les contributeurs de Lucide. Utilisation, copie, modification et redistribution autorisées, y compris commerciales, à condition de conserver cet avis. https://lucide.dev
 
 Logos de marques (logos.json) : collection Simple Icons (https://simpleicons.org), distribuée sous CC0 1.0. Attention : CC0 s'applique à la collection, pas aux marques. Les logos et noms de marques restent la propriété de leurs détenteurs respectifs. Ils sont fournis pour identifier la marque, sans aucun partenariat ni parrainage. Certains logos ont une licence ou une charte propre (indiquée sur la fiche quand elle existe). Respectez toujours les règles de chaque marque.
+
+Icônes supplémentaires : Tabler Icons (MIT, https://tabler.io/icons) et Bootstrap Icons (MIT, https://icons.getbootstrap.com). Utilisation, copie, modification et redistribution autorisées, y compris commerciales, en conservant l'avis de licence MIT de leurs auteurs.
+
+Vecteurs (vecteurs.json) et maquettes (appareils dessinés dans bibliotheque.js) : créations originales de Palezza Network, libres d'utilisation (personnel et commercial). La mention « Palezza Network » est appréciée mais non obligatoire. Les images déposées dans les maquettes restent dans le navigateur de l'utilisateur.
