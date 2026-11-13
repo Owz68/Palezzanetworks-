@@ -1,0 +1,7 @@
+BIBLIOTHÈQUE PALEZZA NETWORK — LICENCES DES RESSOURCES
+
+Polices : chaque fiche indique sa licence (SIL Open Font License 1.1, Apache 2.0 ou Ubuntu Font Licence 1.0). Sources : Google Fonts (github.com/google/fonts) et The League of Moveable Type.
+
+Icônes (icones.json) : Lucide, licence ISC. Copyright (c) pour les contributeurs de Lucide. Utilisation, copie, modification et redistribution autorisées, y compris commerciales, à condition de conserver cet avis. https://lucide.dev
+
+Logos de marques (logos.json) : collection Simple Icons (https://simpleicons.org), distribuée sous CC0 1.0. Attention : CC0 s'applique à la collection, pas aux marques. Les logos et noms de marques restent la propriété de leurs détenteurs respectifs. Ils sont fournis pour identifier la marque, sans aucun partenariat ni parrainage. Certains logos ont une licence ou une charte propre (indiquée sur la fiche quand elle existe). Respectez toujours les règles de chaque marque.

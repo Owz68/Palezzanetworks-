@@ -6,7 +6,7 @@
 .bib-hero h1{font-size:clamp(2rem,6vw,3.8rem);font-weight:800;line-height:1.05;margin:.5rem 0 .6rem;letter-spacing:-.02em;color:#fff}
 .bib-sub{max-width:40rem;color:var(--mut);margin:0 0 1.2rem}
 .bib-tabs{display:flex;gap:.5rem;flex-wrap:wrap}
-.bib-tab{border:1px solid var(--line);color:var(--mut);background:transparent;border-radius:99px;padding:.5rem 1rem;font-size:.9rem;cursor:pointer}
+.bib-tab{text-decoration:none;display:inline-block;border:1px solid var(--line);color:var(--mut);background:transparent;border-radius:99px;padding:.5rem 1rem;font-size:.9rem;cursor:pointer}
 .bib-tab.on{background:#fff;color:#0b0d12;font-weight:700;border-color:#fff}.bib-tab:disabled{opacity:.5;cursor:not-allowed}
 .bib-bar{position:sticky;top:4rem;z-index:20;display:grid;gap:.5rem;grid-template-columns:1fr 1fr;padding:.8rem 0;background:rgba(11,13,18,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-top:1rem}
 .bib-bar #q{grid-column:1/-1}
@@ -47,3 +47,12 @@
 .bib-table{width:100%;border-collapse:collapse;margin:1rem 0}.bib-table th,.bib-table td{padding:.7rem .8rem;border-bottom:1px solid var(--line);text-align:left;font-size:.92rem;vertical-align:top}
 .bib-table th{width:9rem;color:var(--mut);font-weight:600}
 .bib-note{font-size:.8rem;color:var(--mut);padding-bottom:3rem}
+
+.bib-bar2{grid-template-columns:1fr auto}@media(max-width:600px){.bib-bar2{grid-template-columns:1fr}}
+.bib-igrid{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.bib-ico{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:.7rem;display:flex;flex-direction:column;gap:.35rem}
+.bib-ibox{background:#fff;border-radius:.8rem;height:7rem;display:flex;align-items:center;justify-content:center}.bib-ibox.dark{background:#20242f}
+.bib-ibox svg{width:3.6rem;height:3.6rem}
+.bib-iname{font-weight:700;font-size:.85rem;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bib-ico .bib-row{margin-top:.2rem}.bib-ico .bib-btn{flex:1;padding:.4rem .5rem}
+.bib-meta a{color:var(--acc)}.bib-dots{color:var(--mut);padding:0 .3rem;align-self:center}
