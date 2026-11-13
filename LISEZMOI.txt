@@ -38,3 +38,13 @@ v5 (design) : la Bibliothèque a un style « spécimen » sombre : vue Liste (gr
 v5 (icône) : nouvelle icône du site (symbole 3 barres, bleu #1D3C78 sur carré blanc arrondi) : public/favicon.ico, assets/img/favicon.svg, favicon-48.png, favicon-192.png, apple-touch-icon.png ; liens mis à jour dans toutes les pages.
 v5 (icônes et logos) : la Bibliothèque a trois onglets : Polices, Icônes (2356 icônes Lucide) et Logos de marques (3470 logos Simple Icons, classés par catégories). Données : public/bibliotheque/icones.json et logos.json ; licences : public/bibliotheque/LICENCES.txt. Les logos de certaines marques (ex. LinkedIn, Microsoft, Pepsi, Heineken) n'existent pas dans cette collection.
 v5 (suite) : Bibliothèque à 5 onglets : Polices, Icônes (Lucide, Tabler, Bootstrap : environ 9 700 icônes), Vecteurs (88 créations Palezza : formes, vagues, motifs, fonds, badges, séparateurs, couleurs modifiables), Maquettes (15 appareils/cadres : on dépose une image, export PNG ou SVG) et Logos de marques. Données : public/bibliotheque/*.json.
+
+--- v6 : HARMONISATION DES COULEURS (palette Palezza Network) ---
+Nouveau fichier : public/assets/css/palette.css (chargé en dernier sur index, 404 et bibliotheque).
+Les six couleurs officielles sont des variables en haut du fichier :
+  --color-primary #1E3C78 (bleu profond) | --color-secondary #247C78 (vert pétrole) | --color-accent #C76B50 (terracotta)
+  --color-gold #D6A64F (or doux) | --color-sage #A3B49A (vert sauge) | --color-ivory #F3EBDD (ivoire chaud)
+Pour changer une couleur de tout le site, modifiez seulement ces variables. Les autres fichiers CSS ne sont pas modifiés
+(sauf admin.css : variables de couleur). Le logo n'est pas modifié. Aucun texte ni fonction n'a été changé.
+Menu : sous 1200 px le menu devient le menu hamburger ; de 1200 à 1535 px le bouton « Demander un devis » de l'en-tête est masqué
+(il reste dans la page d'accueil et le menu mobile) pour que les 11 rubriques tiennent sur une ligne.
