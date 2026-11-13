@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestion de la bibliothèque — Palezza Network</title><meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/img/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="assets/img/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/admin.css">
+<style>body{font-family:Inter,system-ui,sans-serif;margin:0;background:#f4f6fb;color:#14213d}.w{max-width:60rem;margin:auto;padding:1rem 1rem 4rem}
+.top{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem}.top h1{font-size:1.3rem;margin:0;flex:1}
+.bx{background:#fff;border:1px solid #dde3f0;border-radius:14px;padding:1rem;margin-bottom:1rem}.bx h2{font-size:1rem;margin:0 0 .6rem}
+.bx input,.bx select{width:100%;padding:.65rem;border:1px solid #dde3f0;border-radius:8px;margin:.25rem 0 .5rem;font:inherit}
+.bx label{font-size:.8rem;color:#5b6781;font-weight:600}.row{display:grid;gap:.6rem;grid-template-columns:1fr}@media(min-width:700px){.row{grid-template-columns:1fr 1fr}}
+.b{background:#1D3C78;color:#fff;border:0;border-radius:8px;padding:.6rem 1rem;cursor:pointer;font:inherit;font-weight:600}.b.o{background:#fff;color:#1D3C78;border:1px solid #1D3C78}
+table{width:100%;border-collapse:collapse}td,th{padding:.5rem;border-bottom:1px solid #e6eaf3;text-align:left;font-size:.88rem}.sc{overflow-x:auto}
+.ms{font-size:.85rem;margin:.4rem 0}.er{color:#e11d48}.ok{color:#0a7d3c}</style></head><body><div class="w">
+<div class="top"><h1>Gestion de la bibliothèque — Polices</h1><a class="b o" href="admin.html" style="text-decoration:none">← Espace gestionnaire</a></div>
+<p id="st" class="ms"></p>
+<div id="gate" class="bx" hidden><h2>Connexion requise</h2><p>Connectez-vous d’abord dans l’<a href="admin.html">espace gestionnaire</a>, puis revenez sur cette page.</p></div>
+<div id="main" hidden>
+<div class="bx"><h2>Ajouter une police</h2>
+<div class="row"><div><label>NOM *</label><input id="n"></div><div><label>AUTEUR / CRÉATEUR</label><input id="a"></div>
+<div><label>CATÉGORIE *</label><select id="c"></select></div><div><label>LICENCE * (ex. SIL Open Font License 1.1)</label><input id="l"></div>
+<div><label>USAGE</label><select id="u"><option>Personnel et commercial</option><option>Personnel uniquement</option></select></div><div><label>FICHIERS * (TTF, OTF, WOFF, WOFF2 — max 5 Mo chacun)</label><input id="f" type="file" accept=".ttf,.otf,.woff,.woff2" multiple></div></div>
+<label>DESCRIPTION</label><input id="d">
+<label><input id="r" type="checkbox" style="width:auto;margin-right:.4rem">J’ai vérifié que la licence autorise la redistribution *</label>
+<p><button class="b" id="add">Ajouter (en brouillon)</button></p><p id="am" class="ms"></p></div>
+<div class="bx"><h2>Polices ajoutées depuis cet espace</h2><div class="sc"><table><thead><tr><th>Police</th><th>Catégorie</th><th>Formats</th><th>Téléch.</th><th>Statut</th><th></th></tr></thead><tbody id="tb"></tbody></table></div></div>
+<div class="bx"><h2>Téléchargements du catalogue de base</h2><p class="ms">Les 109 polices fournies avec le site : les plus téléchargées.</p><div class="sc"><table><tbody id="ts"></tbody></table></div></div>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/js/config.js"></script>
+<script>
+(function(){var $=function(s){return document.querySelector(s)},C=window.PN_CFG||{},sb,CATS=["Modernes","Élégantes","Manuscrites","Calligraphiques","Graffiti","Futuristes","Serif","Sans-serif","Décoratives","Publicitaires","Africaines"],B="bibliotheque-fonts";
+function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function msg(id,t,k){var e=$(id);e.className="ms "+(k||"");e.textContent=t}
+if(!C.url||!C.key||!window.supabase){msg("#st","Supabase n’est pas configuré (assets/js/config.js).","er");return}
+sb=window.supabase.createClient(C.url,C.key);$("#c").innerHTML=CATS.map(function(c){return"<option>"+c+"</option>"}).join("");
+function magic(f){return f.slice(0,4).arrayBuffer().then(function(b){var s=Array.from(new Uint8Array(b)).map(function(x){return String.fromCharCode(x)}).join("");var h=Array.from(new Uint8Array(b)).map(function(x){return("0"+x.toString(16)).slice(-2)}).join("");return h==="00010000"||s==="true"||s==="OTTO"||s==="wOFF"||s==="wOF2"})}
+function list(){Promise.all([sb.from("fonts").select("*").order("created_at",{ascending:false}),sb.from("font_stats").select("slug,downloads").order("downloads",{ascending:false})]).then(function(r){
+ var st={};(r[1].data||[]).forEach(function(s){st[s.slug]=s.downloads});
+ if(r[0].error){msg("#st","Table « fonts » introuvable : exécutez d’abord supabase/bibliotheque.sql.","er");return}
+ $("#tb").innerHTML=(r[0].data||[]).map(function(f){return"<tr><td>"+esc(f.name)+"</td><td>"+esc(f.category)+"</td><td>"+(f.formats||[]).join(", ")+"</td><td>"+(st[f.slug]||0)+"</td><td>"+(f.published?"Publiée":"Brouillon")+"</td><td><button class='b o' data-p='"+f.id+"' data-v='"+(f.published?0:1)+"'>"+(f.published?"Dépublier":"Publier")+"</button> <button class='b o' data-d='"+f.id+"'>Supprimer</button></td></tr>"}).join("")||"<tr><td colspan=6>Aucune police ajoutée pour l’instant.</td></tr>";
+ $("#ts").innerHTML=(r[1].data||[]).slice(0,15).map(function(s){return"<tr><td>"+esc(s.slug)+"</td><td>"+s.downloads+"</td></tr>"}).join("")||"<tr><td>Aucun téléchargement enregistré.</td></tr>";
+ document.querySelectorAll("[data-p]").forEach(function(b){b.onclick=function(){sb.from("fonts").update({published:b.dataset.v==="1"}).eq("id",b.dataset.p).then(function(x){if(x.error)msg("#st",x.error.message,"er");list()})}});
+ document.querySelectorAll("[data-d]").forEach(function(b){b.onclick=function(){if(!confirm("Supprimer cette police et ses fichiers ?"))return;var f=(r[0].data||[]).filter(function(z){return z.id==b.dataset.d})[0];var paths=Object.keys(f.files||{}).map(function(k){return f.files[k]});(paths.length?sb.storage.from(B).remove(paths):Promise.resolve()).then(function(){return sb.from("fonts").delete().eq("id",f.id)}).then(function(x){if(x.error)msg("#st",x.error.message,"er");list()})}})})}
+$("#add").onclick=function(){var n=$("#n").value.trim(),l=$("#l").value.trim(),fs=Array.from($("#f").files),ok=/\.(ttf|otf|woff2?)$/i;
+ if(!n||!l||!fs.length)return msg("#am","Nom, licence et au moins un fichier sont obligatoires.","er");
+ if(!$("#r").checked)return msg("#am","Refusé : la redistribution doit être vérifiée.","er");
+ if(fs.some(function(f){return!ok.test(f.name)||f.size>5e6}))return msg("#am","Fichier invalide (TTF, OTF, WOFF, WOFF2 ; 5 Mo max).","er");
+ var slug=n.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+"-"+Date.now().toString(36);
+ msg("#am","Validation des fichiers…");
+ Promise.all(fs.map(magic)).then(function(v){if(v.some(function(x){return!x}))throw new Error("Un fichier n’est pas une vraie police.");msg("#am","Envoi en cours…");var files={};
+  return Promise.all(fs.map(function(f){var ext=f.name.split(".").pop().toUpperCase(),p=slug+"/"+slug+"."+ext.toLowerCase();files[ext]=p;return sb.storage.from(B).upload(p,f,{upsert:false}).then(function(x){if(x.error)throw x.error})})).then(function(){return files})})
+ .then(function(files){return sb.from("fonts").insert({slug:slug,name:n,author:$("#a").value.trim()||null,category:$("#c").value,description:$("#d").value.trim()||null,formats:Object.keys(files),license:l,redistribution:true,usage:$("#u").value,files:files,published:false})})
+ .then(function(x){if(x.error)throw x.error;msg("#am","Police ajoutée en brouillon. Cliquez sur « Publier » pour la rendre visible.","ok");list()}).catch(function(e){msg("#am",e.message||String(e),"er")})};
+sb.auth.getSession().then(function(r){var s=r.data&&r.data.session;if(!s){$("#gate").hidden=false;return}$("#main").hidden=false;list()})})();
+</script></body></html>

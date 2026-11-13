@@ -1,0 +1,2073 @@
+[
+{
+"slug": "poppins",
+"name": "Poppins",
+"author": "Indian Type Foundry, Jonny Pinhorn, Ninad Kale",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "poppins/poppins.ttf",
+"WOFF2": "poppins/poppins.woff2"
+},
+"source": "Google Fonts",
+"description": "Poppins — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "montserrat",
+"name": "Montserrat",
+"author": "Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "montserrat/montserrat.ttf",
+"WOFF2": "montserrat/montserrat.woff2"
+},
+"source": "Google Fonts",
+"description": "Montserrat — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "raleway",
+"name": "Raleway",
+"author": "Matt McInerney, Pablo Impallari, Rodrigo Fuenzalida",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "raleway/raleway.ttf",
+"WOFF2": "raleway/raleway.woff2"
+},
+"source": "Google Fonts",
+"description": "Raleway — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "outfit",
+"name": "Outfit",
+"author": "Smartsheet Inc, Rodrigo Fuenzalida",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "outfit/outfit.ttf",
+"WOFF2": "outfit/outfit.woff2"
+},
+"source": "Google Fonts",
+"description": "Outfit — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "urbanist",
+"name": "Urbanist",
+"author": "Corey Hu",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "urbanist/urbanist.ttf",
+"WOFF2": "urbanist/urbanist.woff2"
+},
+"source": "Google Fonts",
+"description": "Urbanist — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "sora",
+"name": "Sora",
+"author": "Jonathan Barnbrook, Julián Moncada",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "sora/sora.ttf",
+"WOFF2": "sora/sora.woff2"
+},
+"source": "Google Fonts",
+"description": "Sora — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "manrope",
+"name": "Manrope",
+"author": "Mikhail Sharanda",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "manrope/manrope.ttf",
+"WOFF2": "manrope/manrope.woff2"
+},
+"source": "Google Fonts",
+"description": "Manrope — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "plusjakartasans",
+"name": "Plus Jakarta Sans",
+"author": "Tokotype",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "plusjakartasans/plusjakartasans.ttf",
+"WOFF2": "plusjakartasans/plusjakartasans.woff2"
+},
+"source": "Google Fonts",
+"description": "Plus Jakarta Sans — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "dmsans",
+"name": "DM Sans",
+"author": "Colophon Foundry",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "dmsans/dmsans.ttf",
+"WOFF2": "dmsans/dmsans.woff2"
+},
+"source": "Google Fonts",
+"description": "DM Sans — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "lexend",
+"name": "Lexend",
+"author": "Bonnie Shaver-Troup, Thomas Jockin, Santiago Orozco, Héctor Gómez, Superunion",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "lexend/lexend.ttf",
+"WOFF2": "lexend/lexend.woff2"
+},
+"source": "Google Fonts",
+"description": "Lexend — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "playfairdisplay",
+"name": "Playfair Display",
+"author": "Claus Eggers Sørensen",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "playfairdisplay/playfairdisplay.ttf",
+"WOFF2": "playfairdisplay/playfairdisplay.woff2"
+},
+"source": "Google Fonts",
+"description": "Playfair Display — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "cormorantgaramond",
+"name": "Cormorant Garamond",
+"author": "Christian Thalmann",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "cormorantgaramond/cormorantgaramond.ttf",
+"WOFF2": "cormorantgaramond/cormorantgaramond.woff2"
+},
+"source": "Google Fonts",
+"description": "Cormorant Garamond — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "bodonimoda",
+"name": "Bodoni Moda",
+"author": "Owen Earl",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "bodonimoda/bodonimoda.ttf",
+"WOFF2": "bodonimoda/bodonimoda.woff2"
+},
+"source": "Google Fonts",
+"description": "Bodoni Moda — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "librebaskerville",
+"name": "Libre Baskerville",
+"author": "Impallari Type",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "librebaskerville/librebaskerville.ttf",
+"WOFF2": "librebaskerville/librebaskerville.woff2"
+},
+"source": "Google Fonts",
+"description": "Libre Baskerville — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "cinzel",
+"name": "Cinzel",
+"author": "Natanael Gama",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "cinzel/cinzel.ttf",
+"WOFF2": "cinzel/cinzel.woff2"
+},
+"source": "Google Fonts",
+"description": "Cinzel — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "marcellus",
+"name": "Marcellus",
+"author": "Astigmatic",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "marcellus/marcellus.ttf",
+"WOFF2": "marcellus/marcellus.woff2"
+},
+"source": "Google Fonts",
+"description": "Marcellus — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "forum",
+"name": "Forum",
+"author": "Denis Masharov",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "forum/forum.ttf",
+"WOFF2": "forum/forum.woff2"
+},
+"source": "Google Fonts",
+"description": "Forum — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "italiana",
+"name": "Italiana",
+"author": "Santiago Orozco",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "italiana/italiana.ttf",
+"WOFF2": "italiana/italiana.woff2"
+},
+"source": "Google Fonts",
+"description": "Italiana — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "gildadisplay",
+"name": "Gilda Display",
+"author": "Eduardo Tunni",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "gildadisplay/gildadisplay.ttf",
+"WOFF2": "gildadisplay/gildadisplay.woff2"
+},
+"source": "Google Fonts",
+"description": "Gilda Display — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "cormorant",
+"name": "Cormorant",
+"author": "Christian Thalmann",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "cormorant/cormorant.ttf",
+"WOFF2": "cormorant/cormorant.woff2"
+},
+"source": "Google Fonts",
+"description": "Cormorant — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "caveat",
+"name": "Caveat",
+"author": "Impallari Type",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "caveat/caveat.ttf",
+"WOFF2": "caveat/caveat.woff2"
+},
+"source": "Google Fonts",
+"description": "Caveat — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "patrickhand",
+"name": "Patrick Hand",
+"author": "Patrick Wagesreiter",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "patrickhand/patrickhand.ttf",
+"WOFF2": "patrickhand/patrickhand.woff2"
+},
+"source": "Google Fonts",
+"description": "Patrick Hand — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "indieflower",
+"name": "Indie Flower",
+"author": "Kimberly Geswein",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "indieflower/indieflower.ttf",
+"WOFF2": "indieflower/indieflower.woff2"
+},
+"source": "Google Fonts",
+"description": "Indie Flower — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "kalam",
+"name": "Kalam",
+"author": "Indian Type Foundry",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "kalam/kalam.ttf",
+"WOFF2": "kalam/kalam.woff2"
+},
+"source": "Google Fonts",
+"description": "Kalam — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "handlee",
+"name": "Handlee",
+"author": "Joe Prince",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "handlee/handlee.ttf",
+"WOFF2": "handlee/handlee.woff2"
+},
+"source": "Google Fonts",
+"description": "Handlee — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "architectsdaughter",
+"name": "Architects Daughter",
+"author": "Kimberly Geswein",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "architectsdaughter/architectsdaughter.ttf",
+"WOFF2": "architectsdaughter/architectsdaughter.woff2"
+},
+"source": "Google Fonts",
+"description": "Architects Daughter — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "coveredbyyourgrace",
+"name": "Covered By Your Grace",
+"author": "Kimberly Geswein",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "coveredbyyourgrace/coveredbyyourgrace.ttf",
+"WOFF2": "coveredbyyourgrace/coveredbyyourgrace.woff2"
+},
+"source": "Google Fonts",
+"description": "Covered By Your Grace — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "reeniebeanie",
+"name": "Reenie Beanie",
+"author": "James Grieshaber",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "reeniebeanie/reeniebeanie.ttf",
+"WOFF2": "reeniebeanie/reeniebeanie.woff2"
+},
+"source": "Google Fonts",
+"description": "Reenie Beanie — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "homemadeapple",
+"name": "Homemade Apple",
+"author": "Font Diner",
+"category": "Manuscrites",
+"license": "Apache License 2.0",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "homemadeapple/homemadeapple.ttf",
+"WOFF2": "homemadeapple/homemadeapple.woff2"
+},
+"source": "Google Fonts",
+"description": "Homemade Apple — police libre (Apache License 2.0), catégorie manuscrites."
+},
+{
+"slug": "shadowsintolight",
+"name": "Shadows Into Light",
+"author": "Kimberly Geswein",
+"category": "Manuscrites",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "shadowsintolight/shadowsintolight.ttf",
+"WOFF2": "shadowsintolight/shadowsintolight.woff2"
+},
+"source": "Google Fonts",
+"description": "Shadows Into Light — police libre (SIL Open Font License 1.1), catégorie manuscrites."
+},
+{
+"slug": "greatvibes",
+"name": "Great Vibes",
+"author": "Robert Leuschke",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "greatvibes/greatvibes.ttf",
+"WOFF2": "greatvibes/greatvibes.woff2"
+},
+"source": "Google Fonts",
+"description": "Great Vibes — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "pinyonscript",
+"name": "Pinyon Script",
+"author": "Nicole Fally",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "pinyonscript/pinyonscript.ttf",
+"WOFF2": "pinyonscript/pinyonscript.woff2"
+},
+"source": "Google Fonts",
+"description": "Pinyon Script — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "allura",
+"name": "Allura",
+"author": "Robert Leuschke",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "allura/allura.ttf",
+"WOFF2": "allura/allura.woff2"
+},
+"source": "Google Fonts",
+"description": "Allura — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "alexbrush",
+"name": "Alex Brush",
+"author": "Robert Leuschke",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "alexbrush/alexbrush.ttf",
+"WOFF2": "alexbrush/alexbrush.woff2"
+},
+"source": "Google Fonts",
+"description": "Alex Brush — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "dancingscript",
+"name": "Dancing Script",
+"author": "Impallari Type",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "dancingscript/dancingscript.ttf",
+"WOFF2": "dancingscript/dancingscript.woff2"
+},
+"source": "Google Fonts",
+"description": "Dancing Script — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "parisienne",
+"name": "Parisienne",
+"author": "Astigmatic",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "parisienne/parisienne.ttf",
+"WOFF2": "parisienne/parisienne.woff2"
+},
+"source": "Google Fonts",
+"description": "Parisienne — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "sacramento",
+"name": "Sacramento",
+"author": "Astigmatic",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "sacramento/sacramento.ttf",
+"WOFF2": "sacramento/sacramento.woff2"
+},
+"source": "Google Fonts",
+"description": "Sacramento — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "tangerine",
+"name": "Tangerine",
+"author": "Toshi Omagari",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "tangerine/tangerine.ttf",
+"WOFF2": "tangerine/tangerine.woff2"
+},
+"source": "Google Fonts",
+"description": "Tangerine — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "pacifico",
+"name": "Pacifico",
+"author": "Vernon Adams, Jacques Le Bailly, Botjo Nikoltchev, Ani Petrova",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "pacifico/pacifico.ttf",
+"WOFF2": "pacifico/pacifico.woff2"
+},
+"source": "Google Fonts",
+"description": "Pacifico — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+},
+{
+"slug": "satisfy",
+"name": "Satisfy",
+"author": "Sideshow",
+"category": "Calligraphiques",
+"license": "Apache License 2.0",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "satisfy/satisfy.ttf",
+"WOFF2": "satisfy/satisfy.woff2"
+},
+"source": "Google Fonts",
+"description": "Satisfy — police libre (Apache License 2.0), catégorie calligraphiques."
+},
+{
+"slug": "rocksalt",
+"name": "Rock Salt",
+"author": "Sideshow",
+"category": "Graffiti",
+"license": "Apache License 2.0",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "rocksalt/rocksalt.ttf",
+"WOFF2": "rocksalt/rocksalt.woff2"
+},
+"source": "Google Fonts",
+"description": "Rock Salt — police libre (Apache License 2.0), catégorie graffiti."
+},
+{
+"slug": "permanentmarker",
+"name": "Permanent Marker",
+"author": "Font Diner",
+"category": "Graffiti",
+"license": "Apache License 2.0",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "permanentmarker/permanentmarker.ttf",
+"WOFF2": "permanentmarker/permanentmarker.woff2"
+},
+"source": "Google Fonts",
+"description": "Permanent Marker — police libre (Apache License 2.0), catégorie graffiti."
+},
+{
+"slug": "rubikspraypaint",
+"name": "Rubik Spray Paint",
+"author": "NaN, Luke Prowse",
+"category": "Graffiti",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "rubikspraypaint/rubikspraypaint.ttf",
+"WOFF2": "rubikspraypaint/rubikspraypaint.woff2"
+},
+"source": "Google Fonts",
+"description": "Rubik Spray Paint — police libre (SIL Open Font License 1.1), catégorie graffiti."
+},
+{
+"slug": "rubikwetpaint",
+"name": "Rubik Wet Paint",
+"author": "NaN, Luke Prowse",
+"category": "Graffiti",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "rubikwetpaint/rubikwetpaint.ttf",
+"WOFF2": "rubikwetpaint/rubikwetpaint.woff2"
+},
+"source": "Google Fonts",
+"description": "Rubik Wet Paint — police libre (SIL Open Font License 1.1), catégorie graffiti."
+},
+{
+"slug": "londrinasketch",
+"name": "Londrina Sketch",
+"author": "Marcelo Magalhães",
+"category": "Graffiti",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "londrinasketch/londrinasketch.ttf",
+"WOFF2": "londrinasketch/londrinasketch.woff2"
+},
+"source": "Google Fonts",
+"description": "Londrina Sketch — police libre (SIL Open Font License 1.1), catégorie graffiti."
+},
+{
+"slug": "londrinasolid",
+"name": "Londrina Solid",
+"author": "Marcelo Magalhães",
+"category": "Graffiti",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "londrinasolid/londrinasolid.ttf",
+"WOFF2": "londrinasolid/londrinasolid.woff2"
+},
+"source": "Google Fonts",
+"description": "Londrina Solid — police libre (SIL Open Font License 1.1), catégorie graffiti."
+},
+{
+"slug": "fingerpaint",
+"name": "Finger Paint",
+"author": "Carrois Apostrophe",
+"category": "Graffiti",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "fingerpaint/fingerpaint.ttf",
+"WOFF2": "fingerpaint/fingerpaint.woff2"
+},
+"source": "Google Fonts",
+"description": "Finger Paint — police libre (SIL Open Font License 1.1), catégorie graffiti."
+},
+{
+"slug": "sedgwickavedisplay",
+"name": "Sedgwick Ave Display",
+"author": "Pedro Vergani, Kevin Burke",
+"category": "Graffiti",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "sedgwickavedisplay/sedgwickavedisplay.ttf",
+"WOFF2": "sedgwickavedisplay/sedgwickavedisplay.woff2"
+},
+"source": "Google Fonts",
+"description": "Sedgwick Ave Display — police libre (SIL Open Font License 1.1), catégorie graffiti."
+},
+{
+"slug": "sedgwickave",
+"name": "Sedgwick Ave",
+"author": "Pedro Vergani, Kevin Burke",
+"category": "Graffiti",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "sedgwickave/sedgwickave.ttf",
+"WOFF2": "sedgwickave/sedgwickave.woff2"
+},
+"source": "Google Fonts",
+"description": "Sedgwick Ave — police libre (SIL Open Font License 1.1), catégorie graffiti."
+},
+{
+"slug": "rubikmarkerhatch",
+"name": "Rubik Marker Hatch",
+"author": "NaN, Luke Prowse",
+"category": "Graffiti",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "rubikmarkerhatch/rubikmarkerhatch.ttf",
+"WOFF2": "rubikmarkerhatch/rubikmarkerhatch.woff2"
+},
+"source": "Google Fonts",
+"description": "Rubik Marker Hatch — police libre (SIL Open Font License 1.1), catégorie graffiti."
+},
+{
+"slug": "orbitron",
+"name": "Orbitron",
+"author": "Matt McInerney",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "orbitron/orbitron.ttf",
+"WOFF2": "orbitron/orbitron.woff2"
+},
+"source": "Google Fonts",
+"description": "Orbitron — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "michroma",
+"name": "Michroma",
+"author": "Vernon Adams",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "michroma/michroma.ttf",
+"WOFF2": "michroma/michroma.woff2"
+},
+"source": "Google Fonts",
+"description": "Michroma — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "audiowide",
+"name": "Audiowide",
+"author": "Astigmatic",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "audiowide/audiowide.ttf",
+"WOFF2": "audiowide/audiowide.woff2"
+},
+"source": "Google Fonts",
+"description": "Audiowide — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "exo2",
+"name": "Exo 2",
+"author": "Natanael Gama",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "exo2/exo2.ttf",
+"WOFF2": "exo2/exo2.woff2"
+},
+"source": "Google Fonts",
+"description": "Exo 2 — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "rajdhani",
+"name": "Rajdhani",
+"author": "Indian Type Foundry",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "rajdhani/rajdhani.ttf",
+"WOFF2": "rajdhani/rajdhani.woff2"
+},
+"source": "Google Fonts",
+"description": "Rajdhani — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "oxanium",
+"name": "Oxanium",
+"author": "Severin Meyer",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "oxanium/oxanium.ttf",
+"WOFF2": "oxanium/oxanium.woff2"
+},
+"source": "Google Fonts",
+"description": "Oxanium — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "saira",
+"name": "Saira",
+"author": "Omnibus-Type",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "saira/saira.ttf",
+"WOFF2": "saira/saira.woff2"
+},
+"source": "Google Fonts",
+"description": "Saira — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "syncopate",
+"name": "Syncopate",
+"author": "Astigmatic",
+"category": "Futuristes",
+"license": "Apache License 2.0",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "syncopate/syncopate.ttf",
+"WOFF2": "syncopate/syncopate.woff2"
+},
+"source": "Google Fonts",
+"description": "Syncopate — police libre (Apache License 2.0), catégorie futuristes."
+},
+{
+"slug": "majormonodisplay",
+"name": "Major Mono Display",
+"author": "Emre Parlak",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "majormonodisplay/majormonodisplay.ttf",
+"WOFF2": "majormonodisplay/majormonodisplay.woff2"
+},
+"source": "Google Fonts",
+"description": "Major Mono Display — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "tomorrow",
+"name": "Tomorrow",
+"author": "Tony de Marco, Monica Rizzolli",
+"category": "Futuristes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "tomorrow/tomorrow.ttf",
+"WOFF2": "tomorrow/tomorrow.woff2"
+},
+"source": "Google Fonts",
+"description": "Tomorrow — police libre (SIL Open Font License 1.1), catégorie futuristes."
+},
+{
+"slug": "merriweather",
+"name": "Merriweather",
+"author": "Sorkin Type",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "merriweather/merriweather.ttf",
+"WOFF2": "merriweather/merriweather.woff2"
+},
+"source": "Google Fonts",
+"description": "Merriweather — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "lora",
+"name": "Lora",
+"author": "Cyreal",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "lora/lora.ttf",
+"WOFF2": "lora/lora.woff2"
+},
+"source": "Google Fonts",
+"description": "Lora — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "notoserif",
+"name": "Noto Serif",
+"author": "Google",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "notoserif/notoserif.ttf",
+"WOFF2": "notoserif/notoserif.woff2"
+},
+"source": "Google Fonts",
+"description": "Noto Serif — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "ptserif",
+"name": "PT Serif",
+"author": "ParaType",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "ptserif/ptserif.ttf",
+"WOFF2": "ptserif/ptserif.woff2"
+},
+"source": "Google Fonts",
+"description": "PT Serif — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "crimsontext",
+"name": "Crimson Text",
+"author": "Sebastian Kosch",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "crimsontext/crimsontext.ttf",
+"WOFF2": "crimsontext/crimsontext.woff2"
+},
+"source": "Google Fonts",
+"description": "Crimson Text — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "sourceserif4",
+"name": "Source Serif 4",
+"author": "Frank Grießhammer",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "sourceserif4/sourceserif4.ttf",
+"WOFF2": "sourceserif4/sourceserif4.woff2"
+},
+"source": "Google Fonts",
+"description": "Source Serif 4 — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "spectral",
+"name": "Spectral",
+"author": "Production Type",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "spectral/spectral.ttf",
+"WOFF2": "spectral/spectral.woff2"
+},
+"source": "Google Fonts",
+"description": "Spectral — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "ebgaramond",
+"name": "EB Garamond",
+"author": "Georg Duffner, Octavio Pardo",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "ebgaramond/ebgaramond.ttf",
+"WOFF2": "ebgaramond/ebgaramond.woff2"
+},
+"source": "Google Fonts",
+"description": "EB Garamond — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "zillaslab",
+"name": "Zilla Slab",
+"author": "Typotheque",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "zillaslab/zillaslab.ttf",
+"WOFF2": "zillaslab/zillaslab.woff2"
+},
+"source": "Google Fonts",
+"description": "Zilla Slab — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "librecaslontext",
+"name": "Libre Caslon Text",
+"author": "Pablo Impallari",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "librecaslontext/librecaslontext.ttf",
+"WOFF2": "librecaslontext/librecaslontext.woff2"
+},
+"source": "Google Fonts",
+"description": "Libre Caslon Text — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "inter",
+"name": "Inter",
+"author": "Rasmus Andersson",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "inter/inter.ttf",
+"WOFF2": "inter/inter.woff2"
+},
+"source": "Google Fonts",
+"description": "Inter — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "opensans",
+"name": "Open Sans",
+"author": "Steve Matteson",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "opensans/opensans.ttf",
+"WOFF2": "opensans/opensans.woff2"
+},
+"source": "Google Fonts",
+"description": "Open Sans — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "roboto",
+"name": "Roboto",
+"author": "Christian Robertson, ParaType, Font Bureau",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "roboto/roboto.ttf",
+"WOFF2": "roboto/roboto.woff2"
+},
+"source": "Google Fonts",
+"description": "Roboto — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "lato",
+"name": "Lato",
+"author": "Łukasz Dziedzic",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "lato/lato.ttf",
+"WOFF2": "lato/lato.woff2"
+},
+"source": "Google Fonts",
+"description": "Lato — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "nunito",
+"name": "Nunito",
+"author": "Vernon Adams, Cyreal, Jacques Le Bailly",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "nunito/nunito.ttf",
+"WOFF2": "nunito/nunito.woff2"
+},
+"source": "Google Fonts",
+"description": "Nunito — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "worksans",
+"name": "Work Sans",
+"author": "Wei Huang",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "worksans/worksans.ttf",
+"WOFF2": "worksans/worksans.woff2"
+},
+"source": "Google Fonts",
+"description": "Work Sans — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "firasans",
+"name": "Fira Sans",
+"author": "Carrois Apostrophe",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "firasans/firasans.ttf",
+"WOFF2": "firasans/firasans.woff2"
+},
+"source": "Google Fonts",
+"description": "Fira Sans — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "ptsans",
+"name": "PT Sans",
+"author": "ParaType",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "ptsans/ptsans.ttf",
+"WOFF2": "ptsans/ptsans.woff2"
+},
+"source": "Google Fonts",
+"description": "PT Sans — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "sourcesans3",
+"name": "Source Sans 3",
+"author": "Paul D. Hunt",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "sourcesans3/sourcesans3.ttf",
+"WOFF2": "sourcesans3/sourcesans3.woff2"
+},
+"source": "Google Fonts",
+"description": "Source Sans 3 — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "mulish",
+"name": "Mulish",
+"author": "Vernon Adams, Cyreal, Jacques Le Bailly",
+"category": "Sans-serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "mulish/mulish.ttf",
+"WOFF2": "mulish/mulish.woff2"
+},
+"source": "Google Fonts",
+"description": "Mulish — police libre (SIL Open Font License 1.1), catégorie sans-serif."
+},
+{
+"slug": "cinzeldecorative",
+"name": "Cinzel Decorative",
+"author": "Natanael Gama",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "cinzeldecorative/cinzeldecorative.ttf",
+"WOFF2": "cinzeldecorative/cinzeldecorative.woff2"
+},
+"source": "Google Fonts",
+"description": "Cinzel Decorative — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "lobster",
+"name": "Lobster",
+"author": "Impallari Type",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "lobster/lobster.ttf",
+"WOFF2": "lobster/lobster.woff2"
+},
+"source": "Google Fonts",
+"description": "Lobster — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "abrilfatface",
+"name": "Abril Fatface",
+"author": "TypeTogether",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "abrilfatface/abrilfatface.ttf",
+"WOFF2": "abrilfatface/abrilfatface.woff2"
+},
+"source": "Google Fonts",
+"description": "Abril Fatface — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "fascinate",
+"name": "Fascinate",
+"author": "Astigmatic",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "fascinate/fascinate.ttf",
+"WOFF2": "fascinate/fascinate.woff2"
+},
+"source": "Google Fonts",
+"description": "Fascinate — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "eaglelake",
+"name": "Eagle Lake",
+"author": "Astigmatic",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "eaglelake/eaglelake.ttf",
+"WOFF2": "eaglelake/eaglelake.woff2"
+},
+"source": "Google Fonts",
+"description": "Eagle Lake — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "almendra",
+"name": "Almendra",
+"author": "Ana Sanfelippo",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "almendra/almendra.ttf",
+"WOFF2": "almendra/almendra.woff2"
+},
+"source": "Google Fonts",
+"description": "Almendra — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "metalmania",
+"name": "Metal Mania",
+"author": "Open Window",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "metalmania/metalmania.ttf",
+"WOFF2": "metalmania/metalmania.woff2"
+},
+"source": "Google Fonts",
+"description": "Metal Mania — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "unifrakturcook",
+"name": "UnifrakturCook",
+"author": "j. \\'mach\\' wust",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "unifrakturcook/unifrakturcook.ttf",
+"WOFF2": "unifrakturcook/unifrakturcook.woff2"
+},
+"source": "Google Fonts",
+"description": "UnifrakturCook — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "bungee",
+"name": "Bungee",
+"author": "David Jonathan Ross",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "bungee/bungee.ttf",
+"WOFF2": "bungee/bungee.woff2"
+},
+"source": "Google Fonts",
+"description": "Bungee — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "monoton",
+"name": "Monoton",
+"author": "Vernon Adams",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "monoton/monoton.ttf",
+"WOFF2": "monoton/monoton.woff2"
+},
+"source": "Google Fonts",
+"description": "Monoton — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "bebasneue",
+"name": "Bebas Neue",
+"author": "Ryoichi Tsunekawa",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "bebasneue/bebasneue.ttf",
+"WOFF2": "bebasneue/bebasneue.woff2"
+},
+"source": "Google Fonts",
+"description": "Bebas Neue — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "anton",
+"name": "Anton",
+"author": "Vernon Adams",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "anton/anton.ttf",
+"WOFF2": "anton/anton.woff2"
+},
+"source": "Google Fonts",
+"description": "Anton — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "oswald",
+"name": "Oswald",
+"author": "Vernon Adams, Kalapi Gajjar, Cyreal",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "oswald/oswald.ttf",
+"WOFF2": "oswald/oswald.woff2"
+},
+"source": "Google Fonts",
+"description": "Oswald — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "archivoblack",
+"name": "Archivo Black",
+"author": "Omnibus-Type",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "archivoblack/archivoblack.ttf",
+"WOFF2": "archivoblack/archivoblack.woff2"
+},
+"source": "Google Fonts",
+"description": "Archivo Black — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "fjallaone",
+"name": "Fjalla One",
+"author": "Sorkin Type, Irina Smirnova",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "fjallaone/fjallaone.ttf",
+"WOFF2": "fjallaone/fjallaone.woff2"
+},
+"source": "Google Fonts",
+"description": "Fjalla One — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "righteous",
+"name": "Righteous",
+"author": "Astigmatic",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "righteous/righteous.ttf",
+"WOFF2": "righteous/righteous.woff2"
+},
+"source": "Google Fonts",
+"description": "Righteous — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "bangers",
+"name": "Bangers",
+"author": "Vernon Adams",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "bangers/bangers.ttf",
+"WOFF2": "bangers/bangers.woff2"
+},
+"source": "Google Fonts",
+"description": "Bangers — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "lilitaone",
+"name": "Lilita One",
+"author": "Juan Montoreano",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "lilitaone/lilitaone.ttf",
+"WOFF2": "lilitaone/lilitaone.woff2"
+},
+"source": "Google Fonts",
+"description": "Lilita One — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "alfaslabone",
+"name": "Alfa Slab One",
+"author": "JM Solé",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "alfaslabone/alfaslabone.ttf",
+"WOFF2": "alfaslabone/alfaslabone.woff2"
+},
+"source": "Google Fonts",
+"description": "Alfa Slab One — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "passionone",
+"name": "Passion One",
+"author": "Fontstage",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "passionone/passionone.ttf",
+"WOFF2": "passionone/passionone.woff2"
+},
+"source": "Google Fonts",
+"description": "Passion One — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "leaguespartan",
+"name": "League Spartan",
+"author": "Matt Bailey, Tyler Finck",
+"category": "Modernes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "leaguespartan/leaguespartan.ttf",
+"WOFF2": "leaguespartan/leaguespartan.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "League Spartan — police libre (SIL Open Font License 1.1), catégorie modernes."
+},
+{
+"slug": "leaguegothic",
+"name": "League Gothic",
+"author": "Tyler Finck, Caroline Hadilaksono, Micah Rich",
+"category": "Publicitaires",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "leaguegothic/leaguegothic.ttf",
+"WOFF2": "leaguegothic/leaguegothic.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "League Gothic — police libre (SIL Open Font License 1.1), catégorie publicitaires."
+},
+{
+"slug": "lindenhill",
+"name": "Linden Hill",
+"author": "Barry Schwartz",
+"category": "Élégantes",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "lindenhill/lindenhill.ttf",
+"WOFF2": "lindenhill/lindenhill.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "Linden Hill — police libre (SIL Open Font License 1.1), catégorie élégantes."
+},
+{
+"slug": "sortsmillgoudy",
+"name": "Sorts Mill Goudy",
+"author": "Barry Schwartz",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "sortsmillgoudy/sortsmillgoudy.ttf",
+"WOFF2": "sortsmillgoudy/sortsmillgoudy.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "Sorts Mill Goudy — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "fanwoodtext",
+"name": "Fanwood Text",
+"author": "Barry Schwartz",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "fanwoodtext/fanwoodtext.ttf",
+"WOFF2": "fanwoodtext/fanwoodtext.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "Fanwood Text — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "prociono",
+"name": "Prociono",
+"author": "Barry Schwartz",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "prociono/prociono.ttf",
+"WOFF2": "prociono/prociono.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "Prociono — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "goudybookletter1911",
+"name": "Goudy Bookletter 1911",
+"author": "Barry Schwartz",
+"category": "Serif",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "goudybookletter1911/goudybookletter1911.ttf",
+"WOFF2": "goudybookletter1911/goudybookletter1911.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "Goudy Bookletter 1911 — police libre (SIL Open Font License 1.1), catégorie serif."
+},
+{
+"slug": "knewave",
+"name": "Knewave",
+"author": "Tyler Finck",
+"category": "Décoratives",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "knewave/knewave.ttf",
+"WOFF2": "knewave/knewave.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "Knewave — police libre (SIL Open Font License 1.1), catégorie décoratives."
+},
+{
+"slug": "leaguescript",
+"name": "League Script",
+"author": "Haley Fiege",
+"category": "Calligraphiques",
+"license": "SIL Open Font License 1.1",
+"redistribution": true,
+"usage": "Personnel et commercial",
+"formats": [
+"TTF",
+"WOFF2"
+],
+"files": {
+"TTF": "leaguescript/leaguescript.ttf",
+"WOFF2": "leaguescript/leaguescript.woff2"
+},
+"source": "The League of Moveable Type",
+"description": "League Script — police libre (SIL Open Font License 1.1), catégorie calligraphiques."
+}
+]

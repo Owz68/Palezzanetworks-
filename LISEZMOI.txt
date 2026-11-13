@@ -20,3 +20,19 @@ Nos projets : chaque catégorie (Site web, Application, Réseau, Logiciel) est u
 bouton Visiter (site web) ou Télécharger (application, logiciel) ; description par projet.
 Gestionnaire : design refait, projets classés par catégorie, onglets ajoutables dans Découverte / Innovation / Formation,
 interrupteur « Panneau d'affichage » sur chaque projet, fiche et onglet. Aucun nouveau SQL à exécuter.
+
+--- v5 : BIBLIOTHÈQUE (Polices) ---
+Fichiers créés : public/bibliotheque.html, public/admin-bibliotheque.html, public/assets/css/bibliotheque.css,
+  public/assets/js/bibliotheque.js, public/bibliotheque/catalogue.json, public/bibliotheque/polices/ (109 polices TTF + WOFF2),
+  supabase/bibliotheque.sql.
+Fichiers modifiés (ajouts seulement) : public/index.html (lien « Bibliothèque » dans les 2 menus et le pied de page),
+  public/admin.html (bouton « Bibliothèque » dans la barre du haut).
+Étapes manuelles :
+ 1. Supabase > SQL Editor : relire puis exécuter supabase/bibliotheque.sql (nouvelles tables fonts et font_stats + bucket bibliotheque-fonts).
+    Sans cela, le site fonctionne quand même : seuls le compteur de téléchargements et l'ajout de polices par l'admin attendent le SQL.
+ 2. Déposer le site sur GitHub (branche main) puis laisser Cloudflare redéployer. Le worker n'est pas modifié.
+ 3. Ouvrir /admin.html, se connecter, puis cliquer sur « Bibliothèque » pour gérer les polices ajoutées.
+Sources : Google Fonts (dépôt google/fonts, 100 polices) et The League of Moveable Type (9 polices, licences vérifiées via Google Fonts).
+Chaque fiche indique auteur et licence. Catégorie « Africaines » : vide, en attente de polices à redistribution vérifiée.
+v5 (design) : la Bibliothèque a un style « spécimen » sombre : vue Liste (grands aperçus), vue Grille (tuiles « Aa »), pastilles de couleur par catégorie, taille et texte d'aperçu réglables.
+v5 (icône) : nouvelle icône du site (symbole 3 barres, bleu #1D3C78 sur carré blanc arrondi) : public/favicon.ico, assets/img/favicon.svg, favicon-48.png, favicon-192.png, apple-touch-icon.png ; liens mis à jour dans toutes les pages.
