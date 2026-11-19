@@ -28,7 +28,8 @@ cd public && python3 -m http.server 8000
 ```
 Sans réseau Supabase, le site affiche ses textes par défaut. L'admin demande Supabase : utiliser un projet de TEST (voir ci-dessous).
 
-## Environnement de test à créer (non encore fait — nécessite le propriétaire)
+## Environnement de test (décision du 19 nov. : pas de projet Supabase de test, validation manuelle ; les migrations sont testées en local avec `tests/sql/`)
+Pour mémoire, ce qui serait possible plus tard :
 1. **Projet Supabase de test**, séparé de la production : exécuter `supabase/setup.sql` puis `supabase/bibliotheque.sql`, créer un compte gestionnaire de test, mettre l'URL et la clé de TEST dans `public/assets/js/config.js` (branche de refonte uniquement).
 2. **Worker Cloudflare de test**, avec un nom différent de la production (ex. `palezzanetworks-v2-test`) : `npx wrangler deploy --name palezzanetworks-v2-test`. Ne jamais déployer sous le nom du Worker actif.
 3. Ne jamais lancer de test destructif sur la base de production.

@@ -19,3 +19,9 @@ Non modifiés : logos, icônes, couleurs (`palette.css`), base de données, secr
 - Non traité : `admin.html` et `admin-bibliotheque.html` gardent leurs couleurs actuelles (ils seront refaits dans le Control Center, étape 5).
 
 Tests réalisés : 3 pages × thèmes clair et sombre × 6 largeurs (320, 360, 390, 414, 768, 1440 px) : aucun débordement, aucune erreur JavaScript.
+
+## Étape 9 (début) — socle de données, en scripts à exécuter à la main (19 nov. 2026)
+- Pas de projet Supabase de test (limite de 2 projets actifs du compte gratuit) : décision du propriétaire = validation manuelle. Rien n'a été exécuté sur la production.
+- `supabase/SAUVEGARDE_AVANT_MIGRATION.sql`, `supabase/migrations/001_*` (équipe, permissions, versions, journal), `002_*` (compteur Bibliothèque), avec retours arrière.
+- `docs/MIGRATIONS.md` : procédure pas à pas. `tests/sql/` : 37 vérifications sur une base Postgres locale, toutes réussies.
+- Site public et admin : aucun changement dans ce lot.
