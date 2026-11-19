@@ -25,3 +25,14 @@ Tests réalisés : 3 pages × thèmes clair et sombre × 6 largeurs (320, 360, 3
 - `supabase/SAUVEGARDE_AVANT_MIGRATION.sql`, `supabase/migrations/001_*` (équipe, permissions, versions, journal), `002_*` (compteur Bibliothèque), avec retours arrière.
 - `docs/MIGRATIONS.md` : procédure pas à pas. `tests/sql/` : 37 vérifications sur une base Postgres locale, toutes réussies.
 - Site public et admin : aucun changement dans ce lot.
+
+## Étape 4 (début) — animations et profondeur (19 nov. 2026)
+Ajout de `assets/css/v2-motion.css` et `assets/js/v2-motion.js` (2 fichiers, aucune bibliothèque externe), branchés sur `index.html` et `bibliotheque.html`.
+- En-tête de page : réseau animé (nœuds qui pulsent, réagissent à la souris), aurore bleue/cyan, liseré lumineux qui tourne autour du panneau, arrivée échelonnée du titre, du panneau et des boutons.
+- Apparition au défilement renforcée (flou, échelle, décalage des cartes), trait lumineux sous les titres de rubrique, séparateurs lumineux entre les rubriques.
+- Cartes : halo qui suit le doigt ou la souris, légère inclinaison 3D à la souris, icône lumineuse au survol.
+- Boutons : lueur au survol, onde au toucher. Menu : rubrique en cours en surbrillance. Barre de progression de lecture. Transition douce entre pages (navigateurs compatibles).
+- Mouvement réduit : si le visiteur a demandé moins d'animations, rien ne bouge et tout reste visible (testé).
+- GSAP et Three.js étudiés, non retenus : 70 Ko et plus de 600 Ko à télécharger, trop lourds pour des connexions limitées ; le résultat est obtenu en CSS et en quelques Ko de JavaScript. Lottie : pas de besoin à ce stade.
+- Tests : 2 pages × 2 thèmes × 5 largeurs (320 à 1440 px) sans débordement ni erreur ; réseau dessiné ; progression, menu actif, halo des cartes vérifiés ; mouvement réduit vérifié.
+- Page 404 : chemins absolus (s'affiche correctement quelle que soit l'adresse).

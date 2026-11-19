@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="assets/css/v3.css">
   <link rel="stylesheet" href="assets/css/palette.css">
   <link rel="stylesheet" href="assets/css/v2-futur.css">
+<link rel="stylesheet" href="assets/css/v2-motion.css">
   <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||!t)d.classList.add('dark');}catch(e){}})();</script>
 </head>
 <body class="bg-white font-sans text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
@@ -103,4 +104,5 @@ bd.addEventListener("pointerenter",function(){clearTimeout(tm);bar.style.animati
 </script><script src="assets/js/config.js"></script><script src="assets/js/defaults.js"></script><script src="assets/js/v3.js"></script><script src="assets/js/site.js"></script>
 <script>(function(){var l=document.getElementById("loader");if(!l)return;var t=Date.now();function h(){setTimeout(function(){l.classList.add("done");setTimeout(function(){l.remove()},550)},Math.max(0,600-(Date.now()-t)))}document.readyState==="complete"?h():addEventListener("load",h);setTimeout(h,5000)})();</script>
 <script>document.addEventListener("click",function(e){var b=e.target.closest("[data-more]");if(!b)return;var p=b.parentNode.previousElementSibling,o=p.hidden;p.hidden=!o;b.setAttribute("aria-expanded",String(o));b.textContent=o?"Réduire":"Lire plus"})</script>
+<script src="assets/js/v2-motion.js" defer></script>
 </body></html>
