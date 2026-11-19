@@ -18,7 +18,7 @@
   function updateThemeLabels() {
     var dark = root.classList.contains('dark');
     document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
-      btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      btn.setAttribute('aria-label', dark ? 'Passer en mode clair' : 'Passer en mode sombre');
       btn.setAttribute('aria-pressed', String(dark));
     });
   }
@@ -38,7 +38,7 @@
   if (menuBtn && menu) {
     var setMenu = function (open) {
       menuBtn.setAttribute('aria-expanded', String(open));
-      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menuBtn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
       menu.classList.toggle('hidden', !open);
       menuBtn.querySelector('[data-icon-open]').classList.toggle('hidden', open);
       menuBtn.querySelector('[data-icon-close]').classList.toggle('hidden', !open);

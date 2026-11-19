@@ -1,0 +1,44 @@
+/* PALEZZA NETWORK V2 — effets « futuristes » légers (CSS seul, aucune bibliothèque).
+   Chargé après palette.css. Tout est désactivé si le visiteur préfère moins d'animations. */
+
+/* Fond sombre : lueurs bleue et cyan discrètes, grille fine */
+.dark body{
+  background:
+    radial-gradient(60rem 28rem at 85% -8%,rgba(22,119,255,.20),transparent 62%),
+    radial-gradient(46rem 26rem at -5% 18%,rgba(54,217,255,.09),transparent 60%),
+    var(--page);
+}
+.dark body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(54,217,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(54,217,255,.05) 1px,transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 0,transparent 75%);mask-image:radial-gradient(ellipse at 50% 0%,#000 0,transparent 75%);
+}
+
+/* En-tête : verre dépoli avec liseré cyan */
+.dark #site-header{backdrop-filter:blur(14px) saturate(140%)}
+.dark #site-header.is-scrolled{border-color:rgba(54,217,255,.28)}
+
+/* Cartes : verre sombre, halo au survol */
+.dark .card,.dark .app-card,.dark .sec-card,.dark .trust-item{
+  background:linear-gradient(180deg,rgba(22,119,255,.08),rgba(11,24,48,.72));
+  border-color:rgba(54,217,255,.16);
+  transition:border-color .25s,box-shadow .25s,transform .25s;
+}
+.dark .card:hover,.dark .app-card:hover{border-color:rgba(54,217,255,.55);box-shadow:0 0 0 1px rgba(54,217,255,.25),0 18px 44px -18px rgba(22,119,255,.55)}
+.dark .input{background:rgba(5,11,24,.6);border-color:rgba(54,217,255,.22)}
+.dark footer.border-t{background:#030710;border-top:1px solid rgba(54,217,255,.35)}
+.dark .loader{background:#050B18}
+
+/* Titres : petit trait lumineux sous les surtitres */
+.dark .eyebrow-s,.dark section .uppercase.text-brand-300{text-shadow:0 0 18px rgba(54,217,255,.45)}
+
+@media (prefers-reduced-motion:reduce){
+  .dark .card,.dark .app-card,.dark .sec-card,.dark .trust-item{transition:none}
+}
+
+/* Petits écrans (320 à 480 px) : le logo se redimensionne avec l'écran, sans jamais être déformé ni élargir l'en-tête */
+@media (max-width:480px){
+  .logo-img{height:clamp(1rem,5.2vw,1.6rem)}
+  .dark .logo-img{padding:.2rem .45rem;border-radius:8px}
+}

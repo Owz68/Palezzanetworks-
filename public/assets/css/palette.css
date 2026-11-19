@@ -1,17 +1,17 @@
 /* ==========================================================================
-   PALETTE PALEZZA NETWORK — six couleurs officielles + nuances dérivées
+   PALETTE PALEZZA NETWORK V2 — palette du cahier des charges (#050B18, #0B1830, #1677FF, #36D9FF, #F5F8FF) + nuances dérivées
    Ce fichier est chargé en DERNIER : il harmonise toutes les pages.
-   Pour changer une couleur du site, modifiez seulement les six variables ci-dessous.
+   Pour changer une couleur du site, modifiez seulement les variables ci-dessous. Les anciens noms (gold, sage, accent) sont conservés : gold = cyan, sage = bleu froid, accent = bleu clair.
    ========================================================================== */
 :root{
-  --color-primary:#1E3C78;   /* Bleu profond : navigation, titres, boutons principaux */
-  --color-secondary:#247C78; /* Vert pétrole : icônes, éléments secondaires */
-  --color-accent:#C76B50;    /* Terracotta : badges, indicateurs */
-  --color-gold:#D6A64F;      /* Or doux : détails premium, séparateurs */
-  --color-sage:#A3B49A;      /* Vert sauge : fonds secondaires, cartes */
-  --color-ivory:#F3EBDD;     /* Ivoire chaud : arrière-plans, respiration */
+  --color-primary:#1677FF;   /* Bleu électrique : boutons, liens, accents principaux */
+  --color-secondary:#36D9FF; /* Cyan : lueurs, icônes, accents en thème sombre */
+  --color-accent:#4F8FFF;    /* Bleu clair : badges, indicateurs */
+  --color-gold:#36D9FF;      /* Cyan (ancien nom « gold ») : détails, séparateurs */
+  --color-sage:#8FA9D6;      /* Bleu froid (ancien nom « sage ») : fonds secondaires */
+  --color-ivory:#F5F8FF;     /* Blanc bleuté : arrière-plans clairs, texte sur fond sombre */
 
-  /* nuances dérivées des six couleurs (survols, textes, fonds doux) */
+  /* nuances dérivées des couleurs (survols, textes, fonds doux) */
   --primary-hover:color-mix(in srgb,var(--color-primary) 84%,#fff);
   --primary-active:color-mix(in srgb,var(--color-primary) 80%,#000);
   --primary-deep:color-mix(in srgb,var(--color-primary) 52%,#000);
@@ -28,26 +28,26 @@
   --line:color-mix(in srgb,var(--color-ivory) 70%,#a69a82);
   --page:var(--ivory-light);
   --page-alt:var(--color-ivory);
-  --ink:#101F42;
+  --ink:#0B1830;
 
   /* échelle « brand » de Tailwind : bleu profond */
-  --color-brand-50:#EEF2F9;--color-brand-100:#DCE4F1;--color-brand-200:#B9C8E2;--color-brand-300:#8FA3CC;
-  --color-brand-400:#5F7BB4;--color-brand-500:#3A5A9A;--color-brand-600:#1E3C78;--color-brand-700:#182F5F;
-  --color-brand-800:#13264C;--color-brand-900:#0F1F42;--color-brand-950:#0B1733;
+  --color-brand-50:#EAF2FF;--color-brand-100:#D3E4FF;--color-brand-200:#A8C9FF;--color-brand-300:#78A9FF;
+  --color-brand-400:#4A8DFF;--color-brand-500:#1677FF;--color-brand-600:#1677FF;--color-brand-700:#0F5FD1;
+  --color-brand-800:#0C49A3;--color-brand-900:#0B1830;--color-brand-950:#050B18;
   /* neutres : ivoire (clairs) et bleu nuit (foncés), jamais de noir ni de blanc pur */
-  --color-white:#FFFEFA;--color-black:#0B1733;
-  --color-zinc-50:#F7F1E6;--color-zinc-100:#EFE6D5;--color-zinc-200:#E2D8C4;--color-zinc-300:#CFC4AE;
-  --color-zinc-400:#98A0B3;--color-zinc-500:#5B6683;--color-zinc-600:#4A5878;--color-zinc-700:#34436B;
-  --color-zinc-800:#1A2C58;--color-zinc-900:#101F42;--color-zinc-950:#0B1733;
+  --color-white:#FFFFFF;--color-black:#050B18;
+  --color-zinc-50:#F5F8FF;--color-zinc-100:#E8EEFA;--color-zinc-200:#D5DFF2;--color-zinc-300:#B7C6E3;
+  --color-zinc-400:#8497BA;--color-zinc-500:#5A6E94;--color-zinc-600:#3F5379;--color-zinc-700:#2A3C60;
+  --color-zinc-800:#162847;--color-zinc-900:#0B1830;--color-zinc-950:#050B18;
   /* anciennes couleurs vives : ramenées dans la palette */
-  --color-sky-50:var(--secondary-soft);--color-sky-100:#CFE4E1;--color-sky-300:#7DBDB7;--color-sky-400:#4FA29C;--color-sky-500:#247C78;--color-sky-700:#1B5D5A;
-  --color-cyan-50:var(--secondary-soft);--color-cyan-300:#7DBDB7;--color-cyan-500:#247C78;--color-cyan-700:#1B5D5A;
-  --color-emerald-50:var(--secondary-soft);--color-emerald-100:#CFE4E1;--color-emerald-200:#B0D3CF;--color-emerald-300:#7DBDB7;--color-emerald-400:#4FA29C;--color-emerald-500:#247C78;--color-emerald-700:#1B5D5A;
-  --color-amber-50:var(--gold-soft);--color-amber-300:#E8CB8C;--color-amber-400:#D6A64F;--color-amber-500:#C4923A;--color-amber-700:#7A5A1E;
-  --color-orange-400:#C76B50;--color-rose-400:#D98A74;--color-rose-500:#C76B50;--color-rose-600:#A4543C;
-  --color-fuchsia-400:#D98A74;--color-fuchsia-500:#C76B50;--color-fuchsia-600:#A4543C;
+  --color-sky-50:var(--secondary-soft);--color-sky-100:#D4F7FF;--color-sky-300:#8DE7FF;--color-sky-400:#5FDDF9;--color-sky-500:#36D9FF;--color-sky-700:#0E8AA8;
+  --color-cyan-50:var(--secondary-soft);--color-cyan-300:#8DE7FF;--color-cyan-500:#36D9FF;--color-cyan-700:#0E8AA8;
+  --color-emerald-50:var(--secondary-soft);--color-emerald-100:#D4F7FF;--color-emerald-200:#B5F0FF;--color-emerald-300:#8DE7FF;--color-emerald-400:#5FDDF9;--color-emerald-500:#36D9FF;--color-emerald-700:#0E8AA8;
+  --color-amber-50:var(--gold-soft);--color-amber-300:#8DE7FF;--color-amber-400:#36D9FF;--color-amber-500:#1FB8DC;--color-amber-700:#0E5C70;
+  --color-orange-400:#4F8FFF;--color-rose-400:#7CA9FF;--color-rose-500:#4F8FFF;--color-rose-600:#2F6FE0;
+  --color-fuchsia-400:#7CA9FF;--color-fuchsia-500:#4F8FFF;--color-fuchsia-600:#2F6FE0;
 }
-.dark{--page:#0B1733;--page-alt:#0F1F42;--line:rgba(243,235,221,.14);--ink:#F3EBDD}
+.dark{--page:#050B18;--page-alt:#0B1830;--line:rgba(245,248,255,.14);--ink:#F5F8FF}
 
 /* ---------- Socle : fond chaud, texte bleu nuit ---------- */
 body{background:var(--page);color:var(--ink)}
@@ -55,19 +55,19 @@ body{background:var(--page);color:var(--ink)}
 #site-header{background:color-mix(in srgb,var(--page) 86%,transparent)}
 #site-header.is-scrolled{border-color:color-mix(in srgb,var(--color-gold) 45%,transparent)}
 .dark #site-header{background:color-mix(in srgb,var(--page) 82%,transparent)}
-::selection{background:color-mix(in srgb,var(--color-gold) 55%,#fff);color:#0B1733}
+::selection{background:color-mix(in srgb,var(--color-gold) 55%,#fff);color:#050B18}
 :focus-visible{outline-color:var(--color-secondary)}
 .bg-zinc-50,.bg-zinc-50\/60{background-color:var(--page-alt)}
 .dark .bg-zinc-50,.dark .bg-zinc-50\/60,.dark section.bg-zinc-50{background-color:var(--page-alt)}
-.card{background:#FFFDF8;border-color:var(--line)}
+.card{background:#FFFFFF;border-color:var(--line)}
 .dark .card{background:color-mix(in srgb,var(--color-brand-900) 70%,#000);border-color:var(--line)}
-.card:hover{border-color:color-mix(in srgb,var(--color-gold) 70%,transparent);box-shadow:0 18px 40px -22px rgba(30,60,120,.4)}
+.card:hover{border-color:color-mix(in srgb,var(--color-gold) 70%,transparent);box-shadow:0 18px 40px -22px rgba(22,119,255,.4)}
 .border-zinc-200,.border-zinc-200\/80{border-color:var(--line)}
-.input{background:#FFFDF8;border-color:var(--color-zinc-300)}
+.input{background:#FFFFFF;border-color:var(--color-zinc-300)}
 .input:focus{border-color:var(--color-secondary);box-shadow:0 0 0 3px color-mix(in srgb,var(--color-secondary) 22%,transparent)!important}
-.dark .input{background:rgba(243,235,221,.06);border-color:rgba(243,235,221,.2);color:#F3EBDD}
+.dark .input{background:rgba(245,248,255,.06);border-color:rgba(245,248,255,.2);color:#F5F8FF}
 footer.border-t{background:var(--sage-soft);border-top:3px solid var(--color-gold)}
-.dark footer.border-t{background:#081126}
+.dark footer.border-t{background:#030710}
 
 /* ---------- Boutons ---------- */
 .btn-primary,.btn-primary:not(.btn-slide){background:var(--color-primary);border-color:var(--color-primary);color:#fff}
@@ -77,126 +77,125 @@ footer.border-t{background:var(--sage-soft);border-top:3px solid var(--color-gol
 .btn-secondary:hover{background:var(--secondary-soft);border-color:var(--color-secondary);color:var(--secondary-dark)}
 .btn-secondary:active{background:color-mix(in srgb,var(--color-secondary) 22%,var(--ivory-light))}
 .btn:focus-visible{outline:2px solid var(--color-secondary);outline-offset:2px}
-.dark .btn-primary{background:var(--color-gold);border-color:var(--color-gold);color:#0B1733}
+.dark .btn-primary{background:var(--color-gold);border-color:var(--color-gold);color:#050B18}
 .dark .btn-primary:hover{background:color-mix(in srgb,var(--color-gold) 85%,#fff);border-color:transparent}
-.dark .btn-secondary{background:transparent;color:#F3EBDD;border-color:rgba(243,235,221,.35)}
-.dark .btn-secondary:hover{background:rgba(243,235,221,.1);border-color:#F3EBDD;color:#fff}
+.dark .btn-secondary{background:transparent;color:#F5F8FF;border-color:rgba(245,248,255,.35)}
+.dark .btn-secondary:hover{background:rgba(245,248,255,.1);border-color:#F5F8FF;color:#fff}
 .btn.btn-slide{background:linear-gradient(180deg,var(--primary-hover),var(--color-primary));border:1px solid var(--color-primary);color:#fff}
-.btn.btn-slide:hover{background:linear-gradient(180deg,var(--primary-hover),var(--color-primary));box-shadow:0 8px 22px -10px rgba(30,60,120,.55)}
-.dark .btn.btn-slide{background:linear-gradient(180deg,#E2B866,var(--color-gold));border-color:var(--color-gold);color:#0B1733}
-.dark .btn.btn-slide:hover{box-shadow:0 8px 22px -10px rgba(214,166,79,.5)}
+.btn.btn-slide:hover{background:linear-gradient(180deg,var(--primary-hover),var(--color-primary));box-shadow:0 8px 22px -10px rgba(22,119,255,.55)}
+.dark .btn.btn-slide{background:linear-gradient(180deg,#7FE8FF,var(--color-gold));border-color:var(--color-gold);color:#050B18}
+.dark .btn.btn-slide:hover{box-shadow:0 8px 22px -10px rgba(54,217,255,.5)}
 .dlbtn{background:var(--color-secondary)}.dlbtn:hover,.dlbtn:focus-visible{background:var(--color-primary)}
 .dlbtn::before{background:var(--ivory-light);color:var(--ink)}.dlbtn::after{border-top-color:var(--ivory-light)}
 .scroll-down,.back-to-top{background:var(--color-primary);color:#fff}
 .back-to-top:hover{background:var(--primary-hover)}
 .dl{background:linear-gradient(90deg,var(--color-secondary),color-mix(in srgb,var(--color-secondary) 82%,var(--color-primary)));color:#fff}
-.ins{border-color:var(--color-secondary);color:var(--secondary-dark)}.dark .ins{color:#7DBDB7;border-color:#7DBDB7}
+.ins{border-color:var(--color-secondary);color:var(--secondary-dark)}.dark .ins{color:#8DE7FF;border-color:#8DE7FF}
 .cr-btn{border-color:color-mix(in srgb,var(--color-primary) 30%,transparent)}
 .cr-btn:hover{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
 .cr-dots button{background:color-mix(in srgb,var(--color-primary) 25%,transparent)}.cr-dots button.on{background:var(--color-secondary)}
 .sec-tabs button{border-color:color-mix(in srgb,var(--color-primary) 28%,transparent);background:transparent}
 .sec-tabs button:hover{border-color:var(--color-secondary);color:var(--secondary-dark)}
 .sec-tabs button.on{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
-.dark .sec-tabs button.on{background:var(--color-gold);border-color:var(--color-gold);color:#0B1733}
+.dark .sec-tabs button.on{background:var(--color-gold);border-color:var(--color-gold);color:#050B18}
 .sdots button{background:color-mix(in srgb,var(--color-primary) 28%,transparent)}.sdots button.on{background:var(--color-secondary)}
 
 /* ---------- Titres, liens, dégradé de texte ---------- */
 .text-gradient{background-image:linear-gradient(90deg,var(--color-primary),var(--color-secondary))!important}
-.dark .text-gradient{background-image:linear-gradient(90deg,#B9C8E2,#7DBDB7)!important}
-.text-brand-600{color:var(--color-primary)}.dark .text-brand-300{color:#B9C8E2}
+.dark .text-gradient{background-image:linear-gradient(90deg,#A8C9FF,#8DE7FF)!important}
+.text-brand-600{color:var(--color-primary)}.dark .text-brand-300{color:#A8C9FF}
 .text-emerald-600{color:var(--secondary-dark)}.text-rose-600{color:var(--accent-dark)}
 .text-amber-900{color:var(--gold-dark)}.bg-amber-50{background:var(--gold-soft)}
-.bg-brand-50{background:var(--primary-soft)}.dark .dark\:bg-brand-500\/10{background:rgba(143,163,204,.12)}
+.bg-brand-50{background:var(--primary-soft)}.dark .dark\:bg-brand-500\/10{background:rgba(122,169,255,.12)}
 .step-n{background:var(--color-primary);box-shadow:0 0 0 4px color-mix(in srgb,var(--color-gold) 40%,transparent)}
-.dark .step-n{background:var(--color-gold);color:#0B1733;box-shadow:none}
+.dark .step-n{background:var(--color-gold);color:#050B18;box-shadow:none}
 
 /* ---------- Chargement ---------- */
 :root{--ld:var(--color-primary)}.dark{--ld:var(--color-gold)}
-.loader{background:var(--ivory-light)}.dark .loader{background:#0B1733}
+.loader{background:var(--ivory-light)}.dark .loader{background:#050B18}
 
 /* ---------- Panneau d'affichage (hero) ---------- */
-.board{background:radial-gradient(120% 140% at 85% 0%,#2D4F94 0%,var(--color-primary) 38%,var(--primary-deep) 100%);border:1px solid color-mix(in srgb,var(--color-gold) 30%,transparent)}
+.board{background:radial-gradient(120% 140% at 85% 0%,#1B5FD6 0%,var(--color-primary) 38%,var(--primary-deep) 100%);border:1px solid color-mix(in srgb,var(--color-gold) 30%,transparent)}
 .board-eyebrow{color:var(--color-gold)}
 .board-text{color:var(--color-ivory)}
 .board-dot[aria-current=true]{background:var(--color-gold)}
 .board-bg{background:var(--primary-deep)}
-.board-bg:after{background:linear-gradient(90deg,rgba(11,23,51,.82) 0%,rgba(11,23,51,.45) 55%,rgba(11,23,51,.08) 100%),linear-gradient(0deg,rgba(11,23,51,.55),transparent 40%)}
+.board-bg:after{background:linear-gradient(90deg,rgba(5,11,24,.82) 0%,rgba(5,11,24,.45) 55%,rgba(5,11,24,.08) 100%),linear-gradient(0deg,rgba(5,11,24,.55),transparent 40%)}
 
 /* ---------- Bande « Ils nous font confiance » ---------- */
 .trust{background:var(--ivory-light);border-color:var(--line)}
 .dark .trust{background:var(--page-alt);border-color:var(--line)}
 .trust h2{color:var(--sage-dark)}.dark .trust h2{color:var(--color-sage)}
 .trust h2::after{content:"";display:block;width:2.5rem;height:3px;border-radius:3px;background:var(--color-gold);margin:.6rem auto 0}
-.trust-item{background:#FFFDF8;border-color:var(--line)}.dark .trust-item{background:rgba(243,235,221,.06)}
+.trust-item{background:#FFFFFF;border-color:var(--line)}.dark .trust-item{background:rgba(245,248,255,.06)}
 a.trust-item:hover{border-color:var(--color-secondary)}.trust-item.ph{color:var(--sage-dark)}
 
 /* ---------- Rubriques : Découverte / Innovation / Formation ---------- */
-.sec{--ac:#247C78;--ac-d:#164B49;--ac-l:var(--secondary-soft)}
-#decouverte.sec{--ac:#247C78;--ac-d:#164B49;--ac-l:var(--secondary-soft)}
-#innovation.sec{--ac:#1E3C78;--ac-d:#0F1F42;--ac-l:var(--primary-soft)}
-#formation.sec{--ac:#D6A64F;--ac-d:#6B4E18;--ac-l:var(--gold-soft)}
+.sec{--ac:#36D9FF;--ac-d:#0A5C73;--ac-l:var(--secondary-soft)}
+#decouverte.sec{--ac:#36D9FF;--ac-d:#0A5C73;--ac-l:var(--secondary-soft)}
+#innovation.sec{--ac:#1677FF;--ac-d:#0B1830;--ac-l:var(--primary-soft)}
+#formation.sec{--ac:#36D9FF;--ac-d:#0E5C70;--ac-l:var(--gold-soft)}
 #decouverte.sec{background:var(--sage-soft)}#formation.sec{background:var(--page-alt)}
 .dark #decouverte.sec,.dark #innovation.sec,.dark #formation.sec{background:var(--page-alt)}
-.sec-card{background:#FFFDF8;border-color:var(--line);border-top-color:var(--ac)}
-.dark .sec-card{background:rgba(243,235,221,.05);border-color:var(--line);border-top-color:var(--ac)}
-.sec-card h3{color:var(--ink)}.sec-card p{color:var(--color-zinc-600)}.dark .sec-card p{color:#CFC4AE}
-.dark #innovation.sec{--ac:#8FA3CC}.dark #formation.sec{--ac:#D6A64F}.dark #decouverte.sec{--ac:#5FB5AF}
-.dark .sec-num{background:color-mix(in srgb,var(--ac) 22%,transparent);color:#F3EBDD}
+.sec-card{background:#FFFFFF;border-color:var(--line);border-top-color:var(--ac)}
+.dark .sec-card{background:rgba(245,248,255,.05);border-color:var(--line);border-top-color:var(--ac)}
+.sec-card h3{color:var(--ink)}.sec-card p{color:var(--color-zinc-600)}.dark .sec-card p{color:#B7C6E3}
+.dark #innovation.sec{--ac:#78A9FF}.dark #formation.sec{--ac:#36D9FF}.dark #decouverte.sec{--ac:#36D9FF}
+.dark .sec-num{background:color-mix(in srgb,var(--ac) 22%,transparent);color:#F5F8FF}
 
 /* ---------- Logiciels et applications ---------- */
 .apps-sec{background:linear-gradient(180deg,var(--sage-soft),var(--ivory-light))}
-.dark .apps-sec{background:linear-gradient(180deg,rgba(163,180,154,.08),transparent)}
-.app-card{background:#FFFDF8;border-color:var(--line)}.dark .app-card{background:rgba(243,235,221,.05);border-color:var(--line)}
-.app-card:hover{box-shadow:0 22px 44px -24px rgba(30,60,120,.45);border-color:color-mix(in srgb,var(--color-gold) 60%,transparent)}
+.dark .apps-sec{background:linear-gradient(180deg,rgba(143,169,214,.08),transparent)}
+.app-card{background:#FFFFFF;border-color:var(--line)}.dark .app-card{background:rgba(245,248,255,.05);border-color:var(--line)}
+.app-card:hover{box-shadow:0 22px 44px -24px rgba(22,119,255,.45);border-color:color-mix(in srgb,var(--color-gold) 60%,transparent)}
 .app-ico{background:linear-gradient(135deg,var(--color-primary),var(--color-secondary))}
-.app-n{color:var(--ink)}.dark .app-n{color:#F3EBDD}.app-c{color:var(--sage-dark)}.dark .app-c{color:var(--color-sage)}
-.app-s,.am-d{color:var(--color-zinc-600)}.dark .app-s,.dark .am-d{color:#CFC4AE}
-.chip{background:var(--secondary-soft);color:var(--secondary-dark)}.dark .chip{background:rgba(95,181,175,.14);color:#7DBDB7}
+.app-n{color:var(--ink)}.dark .app-n{color:#F5F8FF}.app-c{color:var(--sage-dark)}.dark .app-c{color:var(--color-sage)}
+.app-s,.am-d{color:var(--color-zinc-600)}.dark .app-s,.dark .am-d{color:#B7C6E3}
+.chip{background:var(--secondary-soft);color:var(--secondary-dark)}.dark .chip{background:rgba(54,217,255,.14);color:#8DE7FF}
 .app-more{color:var(--color-primary)}.dark .app-more{color:var(--color-gold)}
-.am{background:rgba(11,23,51,.66)}.am-p{background:var(--ivory-light);color:var(--ink)}.dark .am-p{background:#0F1F42;color:#F3EBDD}
-.more{color:var(--color-zinc-600)}.dark .more{color:#CFC4AE}
+.am{background:rgba(5,11,24,.66)}.am-p{background:var(--ivory-light);color:var(--ink)}.dark .am-p{background:#0B1830;color:#F5F8FF}
+.more{color:var(--color-zinc-600)}.dark .more{color:#B7C6E3}
 .shots .shot,.shots img{background:var(--page-alt)}
 
 /* ---------- Cartes de réalisations (couleur par type) ---------- */
-.ucard{--bg:#13403F;--c1:#247C78;--c2:#7DBDB7}
-.ucard[data-type=application]{--bg:#44221A;--c1:#C76B50;--c2:#EBB39F}
-.ucard[data-type=logiciel]{--bg:#142852;--c1:#1E3C78;--c2:#7C95C8}
-.ucard[data-type=reseau]{--bg:#3B2D10;--c1:#D6A64F;--c2:#F0D79A}
-.ucard[data-type=conseil]{--bg:#2A3626;--c1:#A3B49A;--c2:#D3DFCC}
-.ucard[data-type=maintenance]{--bg:#0F1F42;--c1:#247C78;--c2:#D6A64F}
-.ucard{box-shadow:0 10px 26px -12px rgba(11,23,51,.45)}
-.ucard .txt,.ucard .item{color:rgba(243,235,221,.84)}
-.ucard[data-type=application] .ts-ph,.ucard[data-type=reseau] .ts-ph,.ucard[data-type=conseil] .ts-ph{color:#0B1733;text-shadow:none}
+.ucard{--bg:#072A3A;--c1:#36D9FF;--c2:#A5F0FF}
+.ucard[data-type=application]{--bg:#0A2260;--c1:#1677FF;--c2:#8EB8FF}
+.ucard[data-type=logiciel]{--bg:#0C1F55;--c1:#3A7BFF;--c2:#9CC0FF}
+.ucard[data-type=reseau]{--bg:#062F3F;--c1:#1FB8DC;--c2:#8DE7FF}
+.ucard[data-type=conseil]{--bg:#0B1830;--c1:#78A9FF;--c2:#C2D7FF}
+.ucard[data-type=maintenance]{--bg:#050B18;--c1:#1677FF;--c2:#36D9FF}
+.ucard{box-shadow:0 10px 26px -12px rgba(5,11,24,.45)}
+.ucard .txt,.ucard .item{color:rgba(245,248,255,.84)}
+.ucard[data-type=application] .ts-ph,.ucard[data-type=reseau] .ts-ph,.ucard[data-type=conseil] .ts-ph{color:#050B18;text-shadow:none}
 .ucard .ext:hover{background:var(--color-ivory);color:var(--bg)}
 
 /* ---------- Écrans qui défilent et préchargeurs ---------- */
-.stage{background:radial-gradient(circle at 50% 40%,#2D4F94,#0F1F42)}
-.stage i,.pn-ld i{background:#247C78}.stage i:nth-child(2),.pn-ld i:nth-child(2){background:#3A5A9A}.stage i:nth-child(3),.pn-ld i:nth-child(3){background:#D6A64F}
+.stage{background:radial-gradient(circle at 50% 40%,#1B5FD6,#0B1830)}
+.stage i,.pn-ld i{background:#36D9FF}.stage i:nth-child(2),.pn-ld i:nth-child(2){background:#1677FF}.stage i:nth-child(3),.pn-ld i:nth-child(3){background:#36D9FF}
 .media{background:var(--primary-deep)}
-.media-ph{background:linear-gradient(135deg,var(--ac-d,#0F1F42),var(--ac,#247C78))}
+.media-ph{background:linear-gradient(135deg,var(--ac-d,#0B1830),var(--ac,#36D9FF))}
 
 /* ---------- Bibliothèque : fond bleu nuit, accents de la palette ---------- */
-.bib{--b:#1E3C78;--bg:#0B1733;--card:#102043;--line:#22345F;--txt:#F3EBDD;--mut:#A9B3CB;--soft:#16294F;--acc:#D6A64F}
-.bib-hero{background:radial-gradient(1200px 360px at 15% -10%,#1E3C78 0,transparent 70%),#0B1733}
-.bib-bar{background:rgba(11,23,51,.92)}
-.bib-btn{background:var(--color-gold);border-color:var(--color-gold);color:#0B1733}
-.bib-btn.alt{background:transparent;color:#F3EBDD;border-color:#34497D}.bib-btn.alt:hover{border-color:var(--color-gold)}
-.bib-tab.on,.bib-view .on,.bib-pager .on{background:var(--color-gold);border-color:var(--color-gold);color:#0B1733}
-.bib-chip.on{color:#0B1733}.bib-tile:hover{border-color:var(--color-gold)}
-.bib-mbox,.bib-mprev{background:#E9E0CF}
-.bib-vbox,.bib-ibox{background:#FFFDF8}
+.bib{--b:#1677FF;--bg:#050B18;--card:#0B1830;--line:#1A2F58;--txt:#F5F8FF;--mut:#9DB0D4;--soft:#102345;--acc:#36D9FF}
+.bib-hero{background:radial-gradient(1200px 360px at 15% -10%,#1677FF 0,transparent 70%),#050B18}
+.bib-bar{background:rgba(5,11,24,.92)}
+.bib-btn{background:var(--color-gold);border-color:var(--color-gold);color:#050B18}
+.bib-btn.alt{background:transparent;color:#F5F8FF;border-color:#2B4B85}.bib-btn.alt:hover{border-color:var(--color-gold)}
+.bib-tab.on,.bib-view .on,.bib-pager .on{background:var(--color-gold);border-color:var(--color-gold);color:#050B18}
+.bib-chip.on{color:#050B18}.bib-tile:hover{border-color:var(--color-gold)}
+.bib-mbox,.bib-mprev{background:#E6EDFA}
+.bib-vbox,.bib-ibox{background:#FFFFFF}
 
 /* ---------- Pages d'administration ---------- */
 .w .b,.b{background:var(--color-primary)}.b.o{color:var(--color-primary);border-color:var(--color-primary)}
 
 /* ---------- Correctifs thème sombre et logo (le fichier du logo n'est pas modifié) ---------- */
 html:not(.dark) .logo-img{mix-blend-mode:multiply}
-.dark .logo-img{filter:invert(1) grayscale(1) brightness(1.1);mix-blend-mode:screen}
-.dark .text-brand-600{color:#B9C8E2}
-.dark .text-emerald-600{color:#7DBDB7}.dark .text-rose-600{color:#E8A18C}.dark .text-amber-900{color:#E8CB8C}
-.dark .bg-amber-50{background:rgba(214,166,79,.14)}
-.dark .bg-brand-50{background:rgba(143,163,204,.12)}
-.dark .text-brand-800,.dark .dark\:text-brand-200{color:#DCE4F1}
+.dark .text-brand-600{color:#A8C9FF}
+.dark .text-emerald-600{color:#8DE7FF}.dark .text-rose-600{color:#9DBEFF}.dark .text-amber-900{color:#8DE7FF}
+.dark .bg-amber-50{background:rgba(54,217,255,.14)}
+.dark .bg-brand-50{background:rgba(122,169,255,.12)}
+.dark .text-brand-800,.dark .dark\:text-brand-200{color:#D3E4FF}
 
 /* ---------- En-tête : le logo ne se déforme jamais, le menu ne passe jamais à la ligne ---------- */
 #site-header>div>a:first-child{flex:none}
@@ -216,3 +215,35 @@ html:not(.dark) .logo-img{mix-blend-mode:multiply}
 @media(min-width:1200px) and (max-width:1535px){#site-header .btn-primary{display:none!important}}
 /* 1536 px et plus : menu complet avec bouton, en-tête un peu plus large */
 @media(min-width:1536px){#site-header>div{max-width:92rem}#site-header nav a{padding-inline:.6rem;font-size:.875rem}.logo-img{height:1.75rem}}
+
+/* ==========================================================================
+   V2 — accessibilité des couleurs et logo (ajouts)
+   ========================================================================== */
+:root{
+  --btn:color-mix(in srgb,var(--color-primary) 90%,#000);          /* fond des boutons : texte blanc lisible (contraste > 4,5) */
+  --primary-text:color-mix(in srgb,var(--color-primary) 80%,#000);  /* texte bleu sur fond clair */
+  --secondary-dark:color-mix(in srgb,var(--color-secondary) 45%,#000);
+  --gold-dark:color-mix(in srgb,var(--color-gold) 40%,#000);
+  --sage-dark:color-mix(in srgb,var(--color-sage) 45%,#000);
+}
+.dark{--line:rgba(54,217,255,.16);--primary-text:#8DE7FF}
+/* boutons : bleu lisible en clair, cyan avec texte nuit en sombre */
+.btn-primary,.btn-primary:not(.btn-slide){background:var(--btn);border-color:var(--btn);color:#fff}
+.btn-primary:hover{background:var(--primary-active);border-color:var(--primary-active)}
+.btn.btn-slide,.btn.btn-slide:hover{background:linear-gradient(180deg,var(--btn),var(--primary-active));border-color:var(--btn);color:#fff}
+.btn-secondary{color:var(--primary-text);border-color:color-mix(in srgb,var(--color-primary) 45%,transparent)}
+.dark .btn-primary,.dark .btn.btn-slide{background:var(--color-secondary);border-color:var(--color-secondary);color:#050B18}
+.dark .btn-primary:hover,.dark .btn.btn-slide:hover{background:#7FE8FF;border-color:#7FE8FF;color:#050B18}
+.dark .btn-secondary{color:#F5F8FF;border-color:rgba(54,217,255,.4)}
+.dark .btn-secondary:hover{background:rgba(54,217,255,.1);border-color:var(--color-secondary);color:#fff}
+.text-brand-600,.app-more,.sec-tabs button:hover{color:var(--primary-text)}
+.dark .text-brand-600,.dark .text-brand-300,.dark .app-more{color:#8DE7FF}
+.text-gradient{background-image:linear-gradient(90deg,var(--primary-text),#0E8AA8)!important}
+.dark .text-gradient{background-image:linear-gradient(90deg,#78A9FF,#36D9FF)!important}
+/* panneau d'affichage : bleu nuit profond avec lueur bleue */
+.board{background:radial-gradient(120% 140% at 85% 0%,#1B5FD6 0%,#0B2F6B 42%,#050B18 100%);border:1px solid rgba(54,217,255,.28)}
+.board-eyebrow{color:#7FE8FF}
+.board-text{color:#E6EEFF}
+/* LOGO : le fichier n'est jamais modifié ; en thème sombre il reste dans ses couleurs d'origine, sur une plaque blanche */
+.dark .logo-img{filter:none;mix-blend-mode:normal;background:#fff;border-radius:10px;padding:.22rem .6rem;box-sizing:content-box}
+.dark .logo-pn{filter:none;background:#fff;border-radius:12px;padding:.5rem .8rem;box-sizing:content-box}

@@ -10,7 +10,7 @@ document.querySelectorAll("[data-theme-toggle]").forEach(function(b){b.addEventL
 document.querySelectorAll("[data-year]").forEach(function(e){e.textContent=new Date().getFullYear()});
 var hd=document.getElementById("site-header");if(hd)addEventListener("scroll",function(){hd.classList.toggle("is-scrolled",scrollY>8)},{passive:true})})();
 /* --- données --- */
-function sbGet(path){return fetch(C.url+"/rest/v1/"+path,{headers:{apikey:C.key,Authorization:"Bearer "+C.key}}).then(function(r){return r.ok?r.json():[]}).catch(function(){return[]})}
+function sbGet(path){return fetch(C.url+"/rest/v1/"+path,{headers:(C.key.indexOf("sb_")===0?{apikey:C.key}:{apikey:C.key,Authorization:"Bearer "+C.key})}).then(function(r){return r.ok?r.json():[]}).catch(function(){return[]})}
 function fileUrl(f,fmt){var p=f.files&&f.files[fmt];if(!p)return"";return f.remote?C.url+"/storage/v1/object/public/bibliotheque-fonts/"+p:FILES+p}
 function load(){
  var st=fetch("bibliotheque/catalogue.json").then(function(r){return r.json()}).catch(function(){return[]});
@@ -60,7 +60,7 @@ function detail(slug){var f=DATA.filter(function(x){return x.slug===slug})[0];if
  '<div class="bib-row" style="margin-bottom:3rem">'+f.formats.map(function(x){return'<a class="bib-btn" href="'+esc(fileUrl(f,x))+'" download data-dl="'+esc(slug)+'">Télécharger '+x+"</a>"}).join("")+"</div>";
  document.getElementById("t").oninput=function(e){S.text=e.target.value||" ";document.getElementById("pv").textContent=S.text};document.getElementById("s").oninput=function(e){document.getElementById("pv").style.fontSize=e.target.value+"px"};scrollTo(0,0)}
 document.addEventListener("click",function(e){var a=e.target.closest("[data-dl]");if(!a)return;var s=a.dataset.dl;STATS[s]=(STATS[s]||0)+1;var dn=document.getElementById("dn");if(dn)dn.textContent=STATS[s];
- if(C.url&&C.key)fetch(C.url+"/rest/v1/rpc/bib_increment",{method:"POST",headers:{apikey:C.key,Authorization:"Bearer "+C.key,"Content-Type":"application/json"},body:JSON.stringify({p_slug:s}),keepalive:true}).catch(function(){})});
+ if(C.url&&C.key)fetch(C.url+"/rest/v1/rpc/bib_increment",{method:"POST",headers:Object.assign({"Content-Type":"application/json"},(C.key.indexOf("sb_")===0?{apikey:C.key}:{apikey:C.key,Authorization:"Bearer "+C.key})),body:JSON.stringify({p_slug:s}),keepalive:true}).catch(function(){})});
 /* ===== Icônes, vecteurs, maquettes et logos : tout est dessiné en SVG dans le navigateur ===== */
 var IC={},PAL=["#4f8cff","#22d3ee","#b7f34a","#ff5a5f","#f5c542","#e879b9","#c084fc","#ff8a5b","#34d399"],IPER=48;
 var IS={icon:{q:"",page:1,color:"#1D3C78",set:"lucide"},logo:{q:"",cat:"",page:1,mode:"brand"},vec:{q:"",cat:"",page:1,a:"#1D3C78",b:"#E8EDF8"}};
@@ -77,7 +77,7 @@ function getData(k){return getJson(k==="logo"?"logos":ISETS[IS.icon.set][0])}
 function dataOf(k){return IC[k==="logo"?"logos":ISETS[IS.icon.set][0]]||[]}
 function dlBlob(b,name){var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){try{URL.revokeObjectURL(a.href)}catch(e){}a.remove()},500)}
 function pngFromSvg(svg,w,h,cb){var im=new Image();im.onload=function(){var c=document.createElement("canvas");c.width=w;c.height=h;c.getContext("2d").drawImage(im,0,0,w,h);c.toBlob(cb)};im.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg)}
-function count(slug){if(C.url&&C.key)fetch(C.url+"/rest/v1/rpc/bib_increment",{method:"POST",headers:{apikey:C.key,Authorization:"Bearer "+C.key,"Content-Type":"application/json"},body:JSON.stringify({p_slug:slug}),keepalive:true}).catch(function(){})}
+function count(slug){if(C.url&&C.key)fetch(C.url+"/rest/v1/rpc/bib_increment",{method:"POST",headers:Object.assign({"Content-Type":"application/json"},(C.key.indexOf("sb_")===0?{apikey:C.key}:{apikey:C.key,Authorization:"Bearer "+C.key})),body:JSON.stringify({p_slug:slug}),keepalive:true}).catch(function(){})}
 function pagerBtns(pages,cur){var a=[];for(var i=1;i<=pages;i++){if(i===1||i===pages||Math.abs(i-cur)<=2)a.push(i);else if(a[a.length-1]!=="…")a.push("…")}return a.map(function(x){return x==="…"?'<span class="bib-dots">…</span>':'<button class="'+(x===cur?"on":"")+'" data-p="'+x+'" aria-label="Page '+x+'">'+x+"</button>"}).join("")}
 function chipsOf(list,cur,total){return'<div class="bib-chips"><button class="bib-chip'+(cur?"":" on")+'" data-c="">Toutes'+(total?" ("+total+")":"")+"</button>"+list.map(function(c,i){return'<button class="bib-chip'+(cur===c?" on":"")+'" style="--c:'+PAL[i%PAL.length]+'" data-c="'+esc(c)+'">'+esc(c)+"</button>"}).join("")+"</div>"}
 function bindPager(st,redo){document.querySelectorAll(".bib-pager button").forEach(function(b){b.onclick=function(){st.page=+b.dataset.p;redo();scrollTo(0,0)}});document.querySelectorAll(".bib-chip").forEach(function(b){b.onclick=function(){st.cat=b.dataset.c;st.page=1;redo()}})}
