@@ -1,7 +1,7 @@
 # Déploiement de la version V2 (étape 2) — sans toucher la production
 
 ## Contenu de ce zip
-Site complet (`public/`), scripts SQL (`supabase/`, inchangés), `wrangler.jsonc`, documentation (`docs/`) et le patch exact des changements (`docs/etape2-changements.patch`).
+Site complet (`public/`), scripts SQL d'origine (`supabase/setup.sql`, `bibliotheque.sql`, inchangés) et nouvelles migrations à exécuter à la main (`supabase/migrations/`, procédure dans `docs/MIGRATIONS.md`), tests (`tests/`), `wrangler.jsonc` et documentation (`docs/`).
 
 ## 1. GitHub — branche de test, pas `main`
 Dépôt actuel : celui du site (branche `main` = production).
@@ -14,7 +14,7 @@ En ligne de commande : voir `docs/ENVIRONNEMENT.md`.
 Ne rien changer au Worker `palezzanetworks-v2`. Pour tester : créer un Worker séparé (ex. `palezzanetworks-v2-test`) ou utiliser les aperçus de branche si l'option est activée. Ne pas renommer `wrangler.jsonc` vers le nom de production.
 
 ## 3. Supabase
-Rien à exécuter pour cette version. Les futures migrations (versions, rôles, journal, leads) seront livrées en scripts séparés avec sauvegarde et retour arrière, et ne seront appliquées qu'après ton accord, de préférence sur un projet de test.
+Rien n'a été exécuté. Les migrations (versions, rôles, journal) sont prêtes : suivre `docs/MIGRATIONS.md` (sauvegarde d'abord, retour arrière fourni). Elles ne s'exécutent jamais toutes seules.
 
 ## 4. Retour arrière
 Voir `docs/RESTAURATION.md`.
