@@ -1,0 +1,80 @@
+/* PALEZZA NETWORK V2 — couche d'animations (CSS). Aucune bibliothèque externe.
+   Tout est désactivé si le visiteur préfère moins d'animations (voir la fin du fichier). */
+
+/* ---------- Transition douce entre les pages (navigateurs compatibles) ---------- */
+@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}
+
+/* ---------- Barre de progression de lecture ---------- */
+#pn-prog{position:fixed;inset:0 0 auto 0;height:3px;z-index:70;pointer-events:none;transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,#1677FF,#36D9FF);box-shadow:0 0 12px rgba(54,217,255,.7)}
+
+/* ---------- Arrivée de la page ---------- */
+@keyframes pn-rise{from{opacity:0;transform:translateY(22px) scale(.985);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@keyframes pn-drop{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+html.mo #site-header{animation:pn-drop .7s cubic-bezier(.2,.7,.2,1) both}
+html.mo section.isolate h1{animation:pn-rise .9s .15s cubic-bezier(.2,.7,.2,1) both}
+html.mo section.isolate .board{animation:pn-rise 1s .35s cubic-bezier(.2,.7,.2,1) both}
+html.mo section.isolate .btn{animation:pn-rise .8s .6s cubic-bezier(.2,.7,.2,1) both}
+html.mo section.isolate .btn:nth-child(2){animation-delay:.72s}html.mo section.isolate .btn:nth-child(3){animation-delay:.84s}
+
+/* ---------- Fond animé de l'en-tête de page : réseau + aurore ---------- */
+.pn-net{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.pn-aurora{position:absolute;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.pn-aurora i{position:absolute;border-radius:50%;opacity:.55;will-change:transform}
+.pn-aurora i:nth-child(1){width:34rem;height:34rem;left:-8rem;top:-10rem;background:radial-gradient(circle,rgba(22,119,255,.55),transparent 70%);animation:pn-f1 16s ease-in-out infinite alternate}
+.pn-aurora i:nth-child(2){width:30rem;height:30rem;right:-6rem;top:2rem;background:radial-gradient(circle,rgba(54,217,255,.40),transparent 70%);animation:pn-f2 19s ease-in-out infinite alternate}
+html:not(.dark) .pn-aurora i{opacity:.28}
+@keyframes pn-f1{to{transform:translate(9rem,5rem) scale(1.18)}}
+@keyframes pn-f2{to{transform:translate(-8rem,6rem) scale(.9)}}
+
+/* ---------- Panneau d'affichage : liseré lumineux qui tourne + profondeur ---------- */
+@keyframes pn-rot{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.board{transform-style:preserve-3d;will-change:transform}
+/* liseré : un dégradé conique qui tourne (transformation seule = fluide, même sur téléphone d'entrée de gamme) */
+.pn-glow{position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;z-index:6;overflow:hidden;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.pn-glow::before{content:"";position:absolute;left:50%;top:50%;width:140%;aspect-ratio:1;will-change:transform;
+  background:conic-gradient(transparent 0 62%,#36D9FF 80%,#1677FF 92%,transparent);animation:pn-rot 7s linear infinite}
+
+/* ---------- Apparition au défilement (renforce l'existant) ---------- */
+html.mo .reveal{opacity:0;transform:translateY(34px) scale(.96);filter:blur(5px);
+  transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1),filter .8s,border-color .25s,box-shadow .25s}
+html.mo .reveal.is-visible{opacity:1;transform:none;filter:none;transition-delay:var(--d,0s)}
+html.mo .pn-rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+html.mo .pn-rv.pn-in{opacity:1;transform:none}
+/* trait lumineux qui se déploie sous les titres de rubrique */
+.pn-rv>h2::after{content:"";display:block;height:3px;width:0;margin-top:1rem;border-radius:3px;background:linear-gradient(90deg,#1677FF,#36D9FF);box-shadow:0 0 14px rgba(54,217,255,.55);transition:width 1s .25s cubic-bezier(.2,.7,.2,1)}
+.pn-rv.pn-in>h2::after,html:not(.mo) .pn-rv>h2::after{width:4.5rem}
+
+/* ---------- Cartes : halo qui suit le doigt ou la souris, légère profondeur ---------- */
+.card,.ucard,.app-card,.sec-card{--mx:-60%;--my:-60%}
+.dark .card,.dark .app-card,.dark .sec-card{
+  background:radial-gradient(16rem 12rem at var(--mx) var(--my),rgba(54,217,255,.18),transparent 65%),linear-gradient(180deg,rgba(22,119,255,.08),rgba(11,24,48,.72))}
+html:not(.dark) .card,html:not(.dark) .app-card{background-image:radial-gradient(16rem 12rem at var(--mx) var(--my),rgba(22,119,255,.10),transparent 65%)}
+.card:hover,.app-card:hover,html.mo .card.reveal.is-visible:hover{transform:translateY(-4px)}
+.card>div:first-child.grid{transition:box-shadow .3s,transform .3s}
+.dark .card:hover>div:first-child.grid{box-shadow:0 0 22px rgba(54,217,255,.45);transform:scale(1.06)}
+
+/* ---------- Boutons : lueur au survol, onde au toucher ---------- */
+.btn{position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent}
+.btn-primary:hover{box-shadow:0 0 0 1px rgba(54,217,255,.55),0 12px 32px -10px rgba(22,119,255,.85)}
+.pn-ripple{position:absolute;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.45);transform:scale(0);animation:pn-rip .6s ease-out forwards}
+@keyframes pn-rip{to{transform:scale(1);opacity:0}}
+
+/* ---------- Menu : rubrique en cours de lecture ---------- */
+#site-header nav a.is-active{color:#fff;background:linear-gradient(180deg,rgba(22,119,255,.35),rgba(22,119,255,.12));box-shadow:inset 0 0 0 1px rgba(54,217,255,.35)}
+html:not(.dark) #site-header nav a.is-active{color:#0B1830;background:rgba(22,119,255,.12);box-shadow:inset 0 0 0 1px rgba(22,119,255,.35)}
+
+/* ---------- Séparateur lumineux entre les rubriques ---------- */
+main section+section{position:relative}
+main section+section::before{content:"";position:absolute;left:8%;right:8%;top:0;height:1px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(54,217,255,.45),transparent);opacity:.6}
+
+/* ---------- Visiteurs qui préfèrent moins d'animations : tout est immobile et visible ---------- */
+@media (prefers-reduced-motion:reduce){
+  .pn-aurora i,.pn-glow,#site-header,section.isolate h1,section.isolate .board,section.isolate .btn{animation:none!important}
+  .reveal,.pn-rv{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+  .pn-rv>h2::after{width:4.5rem;transition:none}
+  .card:hover,.app-card:hover{transform:none}
+  #pn-prog{display:none}
+}
