@@ -38,16 +38,17 @@
 
   /* ---- 3. Rubrique active dans le menu ---- */
   function spy() {
-    var links = $$('#site-header nav a[href^="#"]'); if (!links.length || !('IntersectionObserver' in window)) return;
-    var map = {}; links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    /* seuls les vrais liens du menu sont surlignés (pas les boutons « Demander un devis »), en version bureau comme en version mobile */
+    var links = $$('#site-header nav a[href^="#"]').filter(function (a) { return !a.classList.contains('btn') && !a.matches('[class*="bg-brand"]'); });
+    if (!links.length || !('IntersectionObserver' in window)) return;
+    var map = {}; links.forEach(function (a) { var id = a.getAttribute('href').slice(1); (map[id] = map[id] || []).push(a); });
     var cur = null;
+    function set(id) {
+      if (cur && map[cur]) map[cur].forEach(function (a) { a.classList.remove('is-active'); a.removeAttribute('aria-current'); });
+      cur = id; if (map[cur]) map[cur].forEach(function (a) { a.classList.add('is-active'); a.setAttribute('aria-current', 'true'); });
+    }
     var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (e.isIntersecting && map[e.target.id] && cur !== e.target.id) {
-          if (cur && map[cur]) { map[cur].classList.remove('is-active'); map[cur].removeAttribute('aria-current'); }
-          cur = e.target.id; map[cur].classList.add('is-active'); map[cur].setAttribute('aria-current', 'true');
-        }
-      });
+      es.forEach(function (e) { if (e.isIntersecting && map[e.target.id] && cur !== e.target.id) set(e.target.id); });
     }, { rootMargin: '-45% 0px -50% 0px' });
     Object.keys(map).forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
   }
@@ -99,11 +100,11 @@
     function size() {
       var r = h.getBoundingClientRect(); dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       W = r.width; H = r.height; cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var n = W < 520 ? 26 : W < 900 ? 44 : 68; if (low) n = Math.round(n * .7);
-      N = []; for (var i = 0; i < n; i++) N.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: 1 + Math.random() * 1.6, p: Math.random() * 6.28 });
+      var n = W < 520 ? 34 : W < 900 ? 58 : 88; if (low) n = Math.round(n * .7);
+      N = []; for (var i = 0; i < n; i++) N.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: 1.4 + Math.random() * 2, p: Math.random() * 6.28 });
     }
     function draw(t, still) {
-      var dark = root.classList.contains('dark'), L = W < 520 ? 95 : 140;
+      var dark = root.classList.contains('dark'), L = W < 520 ? 105 : 150;
       ctx.clearRect(0, 0, W, H);
       for (var i = 0; i < N.length; i++) {
         var a = N[i];
@@ -113,7 +114,7 @@
         }
         for (var j = i + 1; j < N.length; j++) {
           var b = N[j], x = a.x - b.x, y = a.y - b.y, d2 = x * x + y * y;
-          if (d2 < L * L) { var al = (1 - Math.sqrt(d2) / L) * (dark ? .5 : .32); ctx.strokeStyle = dark ? 'rgba(54,217,255,' + al + ')' : 'rgba(22,119,255,' + al + ')'; ctx.lineWidth = .8; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+          if (d2 < L * L) { var al = (1 - Math.sqrt(d2) / L) * (dark ? .75 : .45); ctx.strokeStyle = dark ? 'rgba(54,217,255,' + al + ')' : 'rgba(22,119,255,' + al + ')'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
         }
         var pulse = still ? 1 : .6 + .4 * Math.sin(t / 700 + a.p);
         ctx.fillStyle = dark ? 'rgba(54,217,255,' + (.85 * pulse) + ')' : 'rgba(22,119,255,' + (.7 * pulse) + ')';
